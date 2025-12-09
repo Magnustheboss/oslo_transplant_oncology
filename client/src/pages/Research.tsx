@@ -1,9 +1,10 @@
 import { Link } from "wouter";
-import { ArrowRight, FileText, Activity, Microscope, Clock } from "lucide-react";
+import { ArrowRight, FileText, Activity, Microscope, Clock, AlertCircle, CheckCircle2, BarChart3, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export default function Research() {
   return (
@@ -14,13 +15,13 @@ export default function Research() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <Badge className="mb-4 bg-white/10 text-white hover:bg-white/20 border-none px-3 py-1 backdrop-blur-md">
-              Clinical Trials & Protocols
+              Transplant Oncology
             </Badge>
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
-              Pushing the Boundaries of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">Transplant Medicine</span>
+              Pushing the Boundaries of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">Cancer Treatment</span>
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Detailed overview of our ongoing prospective studies, including patient selection criteria, methodologies, and expected outcomes.
+              Transplant oncology is a new field integrating surgical oncology, transplant medicine, and tumor biology. Our group focuses on establishing liver transplantation as a curative option for selected patients with non-resectable liver malignancies.
             </p>
           </div>
         </div>
@@ -29,264 +30,337 @@ export default function Research() {
       {/* Main Content */}
       <section className="py-16 bg-slate-50">
         <div className="container">
-          <Tabs defaultValue="seca" className="w-full">
+          
+          {/* Introduction to Transplant Oncology */}
+          <div className="mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-6">The Evolution of Transplant Oncology</h2>
+            <div className="prose prose-lg text-slate-600 max-w-none">
+              <p>
+                Historically, malignancy was considered a contraindication for liver transplantation (LT) due to high recurrence rates and organ scarcity. However, the landscape has shifted dramatically over the last two decades.
+              </p>
+              <p>
+                The concept of <strong>Transplant Oncology</strong> rests on four pillars:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-8">
+                <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex gap-3 items-start">
+                  <div className="bg-primary/10 p-2 rounded-md text-primary mt-1"><Activity className="w-4 h-4" /></div>
+                  <div>
+                    <strong className="block text-slate-900">Multidisciplinary Care</strong>
+                    <span className="text-sm">Integrating oncology, surgery, and hepatology.</span>
+                  </div>
+                </li>
+                <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex gap-3 items-start">
+                  <div className="bg-primary/10 p-2 rounded-md text-primary mt-1"><Microscope className="w-4 h-4" /></div>
+                  <div>
+                    <strong className="block text-slate-900">Genomic Insight</strong>
+                    <span className="text-sm">Using molecular profiling to understand tumor biology.</span>
+                  </div>
+                </li>
+                <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex gap-3 items-start">
+                  <div className="bg-primary/10 p-2 rounded-md text-primary mt-1"><CheckCircle2 className="w-4 h-4" /></div>
+                  <div>
+                    <strong className="block text-slate-900">Extended Resectability</strong>
+                    <span className="text-sm">Using LT to achieve R0 margins in "unresectable" disease.</span>
+                  </div>
+                </li>
+                <li className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex gap-3 items-start">
+                  <div className="bg-primary/10 p-2 rounded-md text-primary mt-1"><Activity className="w-4 h-4" /></div>
+                  <div>
+                    <strong className="block text-slate-900">Tumor Immunology</strong>
+                    <span className="text-sm">Balancing immunosuppression with cancer control.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <Tabs defaultValue="crlm" className="w-full">
             <div className="flex justify-center mb-12 overflow-x-auto pb-4">
               <TabsList className="bg-white p-1 rounded-full shadow-sm border border-slate-200 h-auto inline-flex">
-                <TabsTrigger value="seca" className="rounded-full px-6 py-3 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
-                  SECA-II Extension
+                <TabsTrigger value="crlm" className="rounded-full px-6 py-3 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
+                  Colorectal Liver Metastases (CRLM)
                 </TabsTrigger>
-                <TabsTrigger value="rapid" className="rounded-full px-6 py-3 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
-                  LD-RAPID
-                </TabsTrigger>
-                <TabsTrigger value="tesla" className="rounded-full px-6 py-3 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
-                  TESLA Trial
-                </TabsTrigger>
-                <TabsTrigger value="excalibur" className="rounded-full px-6 py-3 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
-                  EXCALIBUR
+                <TabsTrigger value="cca" className="rounded-full px-6 py-3 text-sm font-medium data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
+                  Cholangiocarcinoma (CCA)
                 </TabsTrigger>
               </TabsList>
             </div>
 
-            {/* SECA-II Content */}
-            <TabsContent value="seca" className="animate-in fade-in slide-in-from-bottom-5 duration-500">
+            {/* CRLM Section */}
+            <TabsContent value="crlm" className="animate-in fade-in slide-in-from-bottom-5 duration-500 space-y-12">
+              
+              {/* SECA Trials Overview */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 space-y-8">
-                  <Card className="border-none shadow-md">
-                    <CardHeader>
-                      <CardTitle className="text-2xl font-heading text-primary">SECA-II Extension</CardTitle>
-                      <CardDescription>Prospective study with extended follow-up and biomarker integration</CardDescription>
-                    </CardHeader>
-                    <CardContent className="prose prose-slate max-w-none">
+                  <div className="prose prose-slate max-w-none">
+                    <h2 className="text-3xl font-heading font-bold text-slate-900">Liver Transplantation for CRLM</h2>
+                    <p className="lead text-xl text-slate-600">
+                      The SECA trials have pioneered the use of liver transplantation for non-resectable colorectal liver metastases, demonstrating that selected patients can achieve long-term survival far exceeding palliative chemotherapy.
+                    </p>
+                    
+                    <div className="my-8">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4">SECA-I & SECA-II Results</h3>
                       <p>
-                        Building on the success of the original SECA-II trial, this extension aims to secure continued funding and scientific exploitation of the cohort. A key deliverable will be the publication of an updated <strong>10-year survival analysis</strong> and cure analysis.
+                        The <strong>SECA-I trial</strong> (2006-2013) was a proof-of-concept study showing a 5-year overall survival (OS) of 60%. However, disease-free survival was low, highlighting the need for better selection.
                       </p>
-                      <h3>Primary Aims</h3>
-                      <ul>
-                        <li>Document long-term survival (10-year OS and cure) after LT for CRLM.</li>
-                        <li>If successful, these data will underpin guideline revisions to include LT as a standard of care.</li>
-                      </ul>
-                      <h3>Patient Selection Criteria</h3>
-                      <ul className="bg-slate-50 p-6 rounded-xl border border-slate-100 not-prose space-y-2 text-sm text-slate-700">
-                        <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"/> No extra-hepatic metastases</li>
-                        <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"/> At least 10% response to chemotherapy</li>
-                        <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"/> Size of largest lesion &lt; 5.5 cm</li>
-                        <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"/> PET-MTV &lt; 70 cm³</li>
-                        <li className="flex gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"/> Minimum 12 months from diagnosis to inclusion</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
+                      <p>
+                        The <strong>SECA-II trial</strong> implemented stricter selection criteria (Oslo Score 0-1), resulting in a dramatic improvement:
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 not-prose my-6">
+                        <Card className="bg-blue-50 border-blue-100">
+                          <CardContent className="p-6 text-center">
+                            <div className="text-4xl font-bold text-primary mb-1">100%</div>
+                            <div className="text-sm font-medium text-slate-600">1-Year Survival</div>
+                          </CardContent>
+                        </Card>
+                        <Card className="bg-blue-50 border-blue-100">
+                          <CardContent className="p-6 text-center">
+                            <div className="text-4xl font-bold text-primary mb-1">83%</div>
+                            <div className="text-sm font-medium text-slate-600">5-Year Survival</div>
+                          </CardContent>
+                        </Card>
+                        <Card className="bg-blue-50 border-blue-100">
+                          <CardContent className="p-6 text-center">
+                            <div className="text-4xl font-bold text-primary mb-1">83%</div>
+                            <div className="text-sm font-medium text-slate-600">10-Year Survival</div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                      <p className="text-sm text-slate-500 italic">
+                        *Results for patients with low Oslo Score (0-1) in SECA-II. Source: Dueland et al., JAMA Surgery 2023.
+                      </p>
+                    </div>
 
-                  <Card className="border-none shadow-md">
+                    <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm my-8">
+                      <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <AlertCircle className="w-5 h-5 text-primary" />
+                        Importance of Rigorous Selection
+                      </h3>
+                      <p className="mb-4">
+                        Patient selection is the single most critical factor for success. Our research identified four key negative prognostic factors (The Oslo Score):
+                      </p>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"/> Largest tumor diameter &gt; 5.5 cm</li>
+                        <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"/> CEA levels &gt; 80 μg/L</li>
+                        <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"/> Progressive disease on chemotherapy</li>
+                        <li className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-red-400"/> Time from primary surgery &lt; 2 years</li>
+                      </ul>
+                      <p className="mt-4 text-sm text-slate-600">
+                        Patients with an Oslo Score of 0-1 have excellent outcomes, while those with high scores (3-4) have poor survival comparable to palliative chemotherapy.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Active Protocols for CRLM */}
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-bold text-slate-900">Active Protocols</h3>
+                    
+                    <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="seca-ext">
+                        <AccordionTrigger className="text-lg font-semibold">SECA-II Extension</AccordionTrigger>
+                        <AccordionContent className="prose prose-sm max-w-none p-4 bg-slate-50 rounded-lg">
+                          <p>
+                            <strong>Objective:</strong> To validate the long-term survival benefits observed in SECA-II and integrate ctDNA monitoring for early relapse detection.
+                          </p>
+                          <p>
+                            <strong>Status:</strong> Active follow-up. 10-year results expected in 2026.
+                          </p>
+                        </AccordionContent>
+                      </AccordionItem>
+                      
+                      <AccordionItem value="rapid">
+                        <AccordionTrigger className="text-lg font-semibold">LD-RAPID Protocol</AccordionTrigger>
+                        <AccordionContent className="prose prose-sm max-w-none p-4 bg-slate-50 rounded-lg">
+                          <p>
+                            <strong>Concept:</strong> Addresses organ scarcity by using small left-lateral liver grafts (segments 2+3) from living donors.
+                          </p>
+                          <p>
+                            <strong>Procedure:</strong> Two-stage hepatectomy. Stage 1: Implantation of auxiliary graft. Stage 2: Removal of native liver after graft regeneration (approx. 2 weeks).
+                          </p>
+                          <p>
+                            <strong>Benefit:</strong> Expands donor pool while minimizing donor risk (double equipoise).
+                          </p>
+                        </AccordionContent>
+                      </AccordionItem>
+
+                      <AccordionItem value="excalibur">
+                        <AccordionTrigger className="text-lg font-semibold">EXCALIBUR Trial</AccordionTrigger>
+                        <AccordionContent className="prose prose-sm max-w-none p-4 bg-slate-50 rounded-lg">
+                          <p>
+                            <strong>Design:</strong> Randomized Controlled Trial (RCT) comparing LT vs. Chemotherapy for patients with high tumor load.
+                          </p>
+                          <p>
+                            <strong>Status:</strong> Currently paused for interim analysis.
+                          </p>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </div>
+                </div>
+
+                {/* Sidebar */}
+                <div className="space-y-6">
+                  <Card className="bg-slate-900 text-white border-none">
                     <CardHeader>
-                      <CardTitle className="text-xl font-heading">Innovation: ctDNA Integration</CardTitle>
+                      <CardTitle className="flex items-center gap-2">
+                        <BarChart3 className="w-5 h-5 text-primary" />
+                        Key Statistic
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-600 mb-4">
-                        A key innovation is the systematic integration of circulating tumor DNA (ctDNA) monitoring. This establishes a new paradigm for biomarker-driven transplant oncology.
+                      <div className="text-3xl font-bold mb-2">5-Year OS: 83%</div>
+                      <p className="text-slate-400 text-sm">
+                        For highly selected CRLM patients (Oslo Score 0-1) in SECA-II.
                       </p>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="bg-blue-50 p-4 rounded-lg text-center">
-                          <Activity className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                          <div className="font-bold text-slate-900 text-sm">Early Detection</div>
-                          <div className="text-xs text-slate-500">Of minimal residual disease</div>
-                        </div>
-                        <div className="bg-blue-50 p-4 rounded-lg text-center">
-                          <Microscope className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                          <div className="font-bold text-slate-900 text-sm">Risk Stratification</div>
-                          <div className="text-xs text-slate-500">Dynamic assessment</div>
-                        </div>
-                        <div className="bg-blue-50 p-4 rounded-lg text-center">
-                          <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                          <div className="font-bold text-slate-900 text-sm">Surveillance</div>
-                          <div className="text-xs text-slate-500">Post-transplant monitoring</div>
-                        </div>
-                      </div>
+                      <div className="h-px bg-slate-800 my-4" />
+                      <div className="text-3xl font-bold mb-2">10%</div>
+                      <p className="text-slate-400 text-sm">
+                        Typical 5-year survival for similar patients on palliative chemotherapy.
+                      </p>
                     </CardContent>
                   </Card>
-                </div>
 
-                <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 className="font-bold text-slate-900 mb-4">Key Personnel</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
-                          <img src="/svein_dueland.webp" alt="Svein Dueland" className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-slate-900">Svein Dueland</div>
-                          <div className="text-xs text-slate-500">Primary Investigator</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
-                          <img src="/tor_magnus_smedman.webp" alt="Tor Magnus Smedman" className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-slate-900">Tor Magnus Smedman</div>
-                          <div className="text-xs text-slate-500">Project Manager</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                    <h3 className="font-bold text-primary mb-2">Status</h3>
-                    <Badge className="bg-green-500 hover:bg-green-600 mb-4">Active Follow-up</Badge>
-                    <p className="text-sm text-slate-600">
-                      Currently collecting long-term data. Expected publication of 10-year results in 2026.
-                    </p>
-                  </div>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Inclusion Criteria (General)</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-sm space-y-2">
+                      <div className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> Liver-only disease (unresectable)</div>
+                      <div className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> ECOG 0-1</div>
+                      <div className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> Primary tumor resected</div>
+                      <div className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> Response to chemotherapy (&gt;10%)</div>
+                      <div className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> PET-MTV &lt; 70 cm³</div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </TabsContent>
 
-            {/* LD-RAPID Content */}
-            <TabsContent value="rapid" className="animate-in fade-in slide-in-from-bottom-5 duration-500">
+            {/* CCA Section */}
+            <TabsContent value="cca" className="animate-in fade-in slide-in-from-bottom-5 duration-500 space-y-12">
+              
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 space-y-8">
-                  <Card className="border-none shadow-md">
-                    <CardHeader>
-                      <CardTitle className="text-2xl font-heading text-primary">LD-RAPID Protocol</CardTitle>
-                      <CardDescription>Two-stage living donor transplantation strategy</CardDescription>
-                    </CardHeader>
-                    <CardContent className="prose prose-slate max-w-none">
+                  <div className="prose prose-slate max-w-none">
+                    <h2 className="text-3xl font-heading font-bold text-slate-900">Liver Transplantation for Cholangiocarcinoma</h2>
+                    <p className="lead text-xl text-slate-600">
+                      Cholangiocarcinoma (CCA) is a heterogeneous group of biliary tract malignancies. While historically contraindicated, LT is now an established treatment for perihilar CCA (pCCA) under strict protocols and an emerging option for intrahepatic CCA (iCCA) in highly selected patients.
+                    </p>
+
+                    <div className="my-8">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4">Perihilar CCA (pCCA)</h3>
                       <p>
-                        The LD-RAPID protocol represents a novel approach that directly addresses organ scarcity. By utilizing small segmental liver grafts (segments 2+3), we expand the donor pool while minimizing donor risk.
+                        For unresectable pCCA, the <strong>Mayo Clinic Protocol</strong> has set the standard. It involves:
                       </p>
-                      <h3>The Procedure</h3>
                       <ol>
-                        <li><strong>Stage 1:</strong> Partial hepatectomy with segment 2-3 graft transplantation. Portal flow is redirected to the graft to induce fast regeneration.</li>
-                        <li><strong>Stage 2:</strong> Delayed total hepatectomy, performed 2-3 weeks after graft regeneration.</li>
+                        <li><strong>Neoadjuvant Therapy:</strong> Chemoradiation to sterilize microscopic disease.</li>
+                        <li><strong>Staging:</strong> Exploratory laparotomy to rule out lymph node metastases.</li>
+                        <li><strong>Transplantation:</strong> For those who remain disease-free.</li>
                       </ol>
-                      <h3>Donor Safety</h3>
                       <p>
-                        Segments 2 and 3 (left lateral sector) represent a safe and feasible portion of the liver that can be donated without significant risk to the donor, adhering to the principle of double equipoise.
+                        This approach yields 5-year survival rates of <strong>60-70%</strong>, comparable to HCC transplantation.
                       </p>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 className="font-bold text-slate-900 mb-4">Key Personnel</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
-                          <img src="/tor_magnus_smedman.webp" alt="Tor Magnus Smedman" className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-slate-900">Tor Magnus Smedman</div>
-                          <div className="text-xs text-slate-500">Lead Investigator</div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                    <h3 className="font-bold text-primary mb-2">Status</h3>
-                    <Badge className="bg-blue-500 hover:bg-blue-600 mb-4">Recruiting</Badge>
-                    <p className="text-sm text-slate-600">
-                      Implementation and first patient transplanted expected in 2026.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
 
-            {/* TESLA Content */}
-            <TabsContent value="tesla" className="animate-in fade-in slide-in-from-bottom-5 duration-500">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 space-y-8">
-                  <Card className="border-none shadow-md">
-                    <CardHeader>
-                      <CardTitle className="text-2xl font-heading text-primary">TESLA Trial</CardTitle>
-                      <CardDescription>Liver transplantation for intrahepatic cholangiocarcinoma</CardDescription>
-                    </CardHeader>
-                    <CardContent className="prose prose-slate max-w-none">
+                    <div className="my-8">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4">Intrahepatic CCA (iCCA)</h3>
                       <p>
-                        The TESLA trial investigates liver transplantation for locally advanced non-resectable intrahepatic cholangiocarcinoma (ICC) treated with neoadjuvant therapy.
+                        iCCA has been more challenging due to biological heterogeneity. However, two phenotypes are now considered for LT:
                       </p>
-                      <p>
-                        Historically, ICC was considered a contraindication for transplantation due to high recurrence rates. However, recent data suggests that highly selected patients who respond to neoadjuvant therapy may achieve excellent long-term survival.
-                      </p>
-                      <h3>Early Results</h3>
-                      <p>
-                        Early results published in the <em>British Journal of Surgery</em> (2025) indicate promising outcomes, with acceptable recurrence rates in carefully selected candidates.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 className="font-bold text-slate-900 mb-4">Key Personnel</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
-                          <img src="/sheraz_yaqub.webp" alt="Sheraz Yaqub" className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-slate-900">Sheraz Yaqub</div>
-                          <div className="text-xs text-slate-500">Lead Investigator</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                    <h3 className="font-bold text-primary mb-2">Status</h3>
-                    <Badge className="bg-green-500 hover:bg-green-600 mb-4">Ongoing</Badge>
-                    <p className="text-sm text-slate-600">
-                      Active recruitment and follow-up.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
-
-            {/* EXCALIBUR Content */}
-            <TabsContent value="excalibur" className="animate-in fade-in slide-in-from-bottom-5 duration-500">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 space-y-8">
-                  <Card className="border-none shadow-md">
-                    <CardHeader>
-                      <CardTitle className="text-2xl font-heading text-primary">EXCALIBUR Trial</CardTitle>
-                      <CardDescription>Randomized Controlled Trial for CRLM</CardDescription>
-                    </CardHeader>
-                    <CardContent className="prose prose-slate max-w-none">
-                      <p>
-                        The EXCALIBUR project is studying new treatment modalities and strategies for patients with colorectal liver metastases and heavy tumor burden.
-                      </p>
-                      <p>
-                        This randomized controlled trial aims to provide level 1 evidence comparing liver transplantation to standard of care (chemotherapy) for patients with high tumor load who are not eligible for resection.
-                      </p>
-                      <h3>Study Arms</h3>
-                      <ul>
-                        <li><strong>Arm A:</strong> Liver Transplantation</li>
-                        <li><strong>Arm B:</strong> Standard of Care (Chemotherapy)</li>
+                      <ul className="list-disc pl-5 space-y-2">
+                        <li><strong>Very Early iCCA:</strong> Single tumor ≤ 2cm in cirrhotic liver (often an incidental finding).</li>
+                        <li><strong>Locally Advanced iCCA:</strong> Liver-confined disease with sustained response to chemotherapy.</li>
                       </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 className="font-bold text-slate-900 mb-4">Key Personnel</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
-                          <img src="/pal_dag_line.webp" alt="Pål-Dag Line" className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-slate-900">Pål-Dag Line</div>
-                          <div className="text-xs text-slate-500">Group Lead</div>
+                      
+                      <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 mt-6">
+                        <h4 className="text-lg font-bold text-primary mb-2">The TESLA Trial (Time-to-Event in Selected Liver-only iCCA)</h4>
+                        <p className="text-sm mb-4">
+                          This prospective exploratory trial investigates LT for non-resectable iCCA. The core principle is <strong>"Biology is King"</strong>—selecting patients who demonstrate stable disease on chemotherapy for at least 6 months.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                          <div>
+                            <strong>Inclusion Criteria:</strong>
+                            <ul className="list-disc pl-4 mt-1 space-y-1 text-slate-600">
+                              <li>Single tumor ≤ 2cm OR stable disease &gt; 6 months</li>
+                              <li>No extrahepatic disease (PET/CT)</li>
+                              <li>No lymph node involvement</li>
+                              <li>ECOG 0-1</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <strong>Key Exclusion:</strong>
+                            <ul className="list-disc pl-4 mt-1 space-y-1 text-slate-600">
+                              <li>Vascular invasion (Main PV/IVC)</li>
+                              <li>Peritoneal perforation</li>
+                              <li>Prior transperitoneal biopsy (seeding risk)</li>
+                              <li>Weight loss &gt; 15%</li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
+
+                    <div className="my-8">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4">Background & Rationale</h3>
+                      <p>
+                        Cholangiocarcinoma accounts for 3% of all GI malignancies. Surgical resection is the only curative treatment, but resectability rates are low (&lt;40% for pCCA) and recurrence is high.
+                      </p>
+                      <p>
+                        <strong>Why LT?</strong> Liver transplantation offers an oncologic "field-change" operation that removes the tumor-bearing liver and underlying diseased parenchyma, addressing occult biliary extension and microscopic intrahepatic disease.
+                      </p>
+                      <p>
+                        <strong>The "Test of Time":</strong> For iCCA, unlike pCCA, neoadjuvant chemoradiotherapy is not standardized. Instead, we use a "test-of-time" strategy: patients must show disease stability on systemic chemotherapy for ≥6-12 months. This selects for favorable tumor biology and excludes aggressive disease destined for early recurrence.
+                      </p>
+                    </div>
                   </div>
-                  <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                    <h3 className="font-bold text-primary mb-2">Status</h3>
-                    <Badge className="bg-yellow-500 hover:bg-yellow-600 mb-4">Paused</Badge>
-                    <p className="text-sm text-slate-600">
-                      Currently paused for interim analysis.
-                    </p>
-                  </div>
+                </div>
+
+                {/* Sidebar */}
+                <div className="space-y-6">
+                  <Card className="bg-slate-900 text-white border-none">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Clock className="w-5 h-5 text-primary" />
+                        The "Test of Time"
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-slate-300 text-sm mb-4">
+                        Unlike HCC (Milan criteria), iCCA selection relies on biological behavior over time.
+                      </p>
+                      <div className="bg-white/10 p-3 rounded-lg">
+                        <div className="text-2xl font-bold mb-1">6-12 Months</div>
+                        <div className="text-xs text-slate-400">
+                          Minimum duration of stability on chemotherapy required before listing.
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Contraindications</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-sm space-y-2">
+                      <div className="flex gap-2"><AlertCircle className="w-4 h-4 text-red-500 shrink-0" /> Extrahepatic disease</div>
+                      <div className="flex gap-2"><AlertCircle className="w-4 h-4 text-red-500 shrink-0" /> Lymph node metastases</div>
+                      <div className="flex gap-2"><AlertCircle className="w-4 h-4 text-red-500 shrink-0" /> Vascular invasion (Main PV)</div>
+                      <div className="flex gap-2"><AlertCircle className="w-4 h-4 text-red-500 shrink-0" /> Prior peritoneal biopsy</div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-blue-50 border-blue-100">
+                    <CardHeader>
+                      <CardTitle className="text-primary flex items-center gap-2">
+                        <BookOpen className="w-4 h-4" />
+                        Key Reference
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-sm text-slate-600">
+                      <p className="italic mb-2">"Current Status of Liver Transplantation in Cholangiocarcinoma"</p>
+                      <p>Yaqub S, Smedman TM, Dueland S, et al. (2025)</p>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </TabsContent>
