@@ -14,7 +14,7 @@ import NotFound from "@/pages/NotFound";
 
 function Router() {
   return (
-    <WouterRouter base="/oslo_transplant_oncology">
+    <WouterRouter>
       <Layout>
         <Switch>
           <Route path="/" component={Home} />

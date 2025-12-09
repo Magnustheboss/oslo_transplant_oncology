@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 const plugins = [react(), tailwindcss()];
 
 export default defineConfig({
-  base: "/oslo_transplant_oncology/",
+  base: "/",
   plugins,
   resolve: {
     alias: {
