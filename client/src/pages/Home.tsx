@@ -24,13 +24,13 @@ export default function Home() {
             <Badge className="mb-6 bg-accent/90 hover:bg-accent text-white border-none px-4 py-1.5 text-sm font-medium tracking-wide uppercase backdrop-blur-sm">
               Pioneering Medical Research
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-7xl font-heading font-bold text-white leading-[1.1] mb-6 tracking-tight">
               Redefining Survival in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Transplant Oncology</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 mb-10 font-light leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-2xl text-slate-200 mb-10 font-light leading-relaxed max-w-2xl">
               The Oslo Transplant Oncology Group is leading the world in establishing liver transplantation as a curative option for non-resectable colorectal liver metastases.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col w-full sm:w-auto sm:flex-row gap-4">
               <Link href="/research">
                 <Button size="lg" className="rounded-full px-8 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all hover:scale-105">
                   Explore Our Research

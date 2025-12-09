@@ -14,7 +14,7 @@ export default function Research() {
             <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 border-none px-3 py-1">
               Our Science
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
+            <h1 className="text-3xl md:text-6xl font-heading font-bold text-slate-900 mb-6">
               Research & <span className="text-primary">Trials</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">

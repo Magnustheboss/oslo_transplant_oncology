@@ -61,7 +61,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className={cn("font-heading font-bold text-lg leading-tight tracking-tight", isScrolled ? "text-foreground" : "text-white mix-blend-difference")}>
+                <span className={cn("font-heading font-bold text-base md:text-lg leading-tight tracking-tight", isScrolled ? "text-foreground" : "text-white mix-blend-difference")}>
                   Oslo Transplant Oncology
                 </span>
                 <span className={cn("text-xs font-medium tracking-wider uppercase opacity-80", isScrolled ? "text-muted-foreground" : "text-white/80 mix-blend-difference")}>
