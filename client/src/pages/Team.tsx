@@ -9,7 +9,7 @@ const leadership = [
   {
     name: "Pål-Dag Line",
     role: "Group Leader & Professor",
-    image: "/images/pal_dag_line.jpg",
+    image: "/images/pal_dag_line.webp",
     bio: "Professor of Surgery and Head of the Department of Transplantation Medicine. Pioneer of the SECA trials and the RAPID technique.",
     affiliation: "University of Oslo / OUS"
   }
@@ -19,21 +19,21 @@ const coreMembers = [
   {
     name: "Svein Dueland",
     role: "Consulting Oncologist",
-    image: "/images/svein_dueland.jpg",
+    image: "/images/svein_dueland.webp",
     bio: "Key investigator in the SECA trials, focusing on oncological selection criteria and chemotherapy protocols.",
     affiliation: "Oslo University Hospital"
   },
   {
     name: "Tor Magnus Smedman",
     role: "Consulting Oncologist",
-    image: "/images/tor_magnus_smedman.jpg",
+    image: "/images/tor_magnus_smedman.webp",
     bio: "Specializes in colorectal liver metastases and living donor protocols. Leading the LD-RAPID initiative.",
     affiliation: "Oslo University Hospital"
   },
   {
     name: "Sheraz Yaqub",
     role: "Lead, TESLA Trials",
-    image: "/images/sheraz_yaqub.jpg",
+    image: "/images/sheraz_yaqub.webp",
     bio: "Leading the TESLA trial for intrahepatic cholangiocarcinoma. Expert in hepatobiliary surgery and clinical trials.",
     affiliation: "Oslo University Hospital"
   },
