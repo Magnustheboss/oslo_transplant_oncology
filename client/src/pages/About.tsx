@@ -84,11 +84,69 @@ export default function About() {
                   <p>
                     The Research Group for Transplant Oncology at Oslo University Hospital has pioneered the concept of liver transplantation for non-resectable CRLM, a condition previously considered an absolute contraindication to transplantation worldwide.
                   </p>
-                  <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 my-8">
-                    <h3 className="text-xl font-bold text-slate-900 mb-4 mt-0">The SECA Legacy</h3>
-                    <p className="mb-0">
-                      Our groundbreaking SECA-I and SECA-II trials have demonstrated that for selected patients, liver transplantation can offer a dramatic survival advantage. The SECA-II study achieved a <strong>5-year overall survival rate of 83%</strong>, fundamentally changing the conversation around what is possible in transplant oncology.
-                    </p>
+                  {/* Interactive Timeline */}
+                  <div className="my-12 relative border-l-2 border-slate-200 ml-4 space-y-12">
+                    
+                    {/* 2006: SECA-I Start */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-slate-400 mb-1">2006</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">SECA-I Trial Initiated</h3>
+                      <p className="text-slate-600">
+                        The world's first prospective pilot study investigating liver transplantation for unresectable colorectal liver metastases (CRLM).
+                      </p>
+                    </div>
+
+                    {/* 2013: SECA-I Results */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-300 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-blue-500 mb-1">2013</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Proof of Concept</h3>
+                      <p className="text-slate-600">
+                        SECA-I results published, showing a 5-year overall survival of 60%. The study identified key prognostic factors, leading to the development of the "Oslo Score".
+                      </p>
+                    </div>
+
+                    {/* 2012: SECA-II Start */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-blue-600 mb-1">2012</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">SECA-II Trial Launch</h3>
+                      <p className="text-slate-600">
+                        A new trial implementing strict selection criteria (Oslo Score 0-1) to improve outcomes and validate the findings of SECA-I.
+                      </p>
+                    </div>
+
+                    {/* 2015: RAPID Concept */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-400 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-purple-600 mb-1">2015</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">RAPID Procedure Introduced</h3>
+                      <p className="text-slate-600">
+                        Introduction of the RAPID technique (Resection And Partial Liver Segment 2/3 Transplantation), paving the way for living donor protocols.
+                      </p>
+                    </div>
+
+                    {/* 2020: SECA-II Results */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-500 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-green-600 mb-1">2020</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Record-Breaking Survival</h3>
+                      <p className="text-slate-600">
+                        SECA-II results demonstrate an unprecedented <strong>83% 5-year overall survival</strong> for selected patients, comparable to standard transplant indications.
+                      </p>
+                    </div>
+
+                    {/* Present: New Frontiers */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-white shadow-md animate-pulse" />
+                      <div className="text-sm font-bold text-primary mb-1">Present</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">TESLA & EXCALIBUR</h3>
+                      <p className="text-slate-600">
+                        Expanding the frontier with the TESLA trial for intrahepatic cholangiocarcinoma and the EXCALIBUR randomized controlled trial for high-load CRLM.
+                      </p>
+                    </div>
+
                   </div>
                   <p>
                     We developed the "Oslo Score," a prognostic scoring system now used internationally to select patients who are most likely to benefit from transplantation.
