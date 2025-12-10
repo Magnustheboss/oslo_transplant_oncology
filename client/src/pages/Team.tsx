@@ -55,14 +55,21 @@ const coreMembers = [
     name: "Jon Magnus Aarstrand Solheim",
     role: "Researcher",
     image: null,
-    bio: "Investigating long-term outcomes and quality of life in transplant recipients.",
+    bio: "Experienced transplant surgeon with a focus on complex liver malignancies and surgical innovation.",
     affiliation: "University of Oslo"
   },
   {
     name: "Maria Gjerde",
-    role: "Researcher",
+    role: "Study Nurse",
     image: null,
-    bio: "Contributing to the group's ongoing prospective studies and data analysis.",
+    bio: "Pivotal to the follow-up of patients and the group's ongoing prospective studies and data analysis.",
+    affiliation: "Oslo University Hospital"
+  },
+  {
+    name: "Åsmund A. Fretland",
+    role: "HPB Surgeon",
+    image: null,
+    bio: "Expert in minimally invasive surgery and clinical trials.",
     affiliation: "Oslo University Hospital"
   }
 ];
@@ -71,7 +78,7 @@ const associatedMembers = [
   { name: "Kristoffer Lassen", role: "Associate Member", affiliation: "Oslo University Hospital" },
   { name: "Marit H. Andersen", role: "Associate Member", affiliation: "Oslo University Hospital" },
   { name: "Mona-Elisabeth Revheim", role: "Associate Member", affiliation: "Oslo University Hospital" },
-  { name: "Åsmund A. Fretland", role: "Associate Member", affiliation: "Oslo University Hospital" },
+
   { name: "Trygve Syversveen", role: "Associate Member", affiliation: "Oslo University Hospital" }
 ];
 
