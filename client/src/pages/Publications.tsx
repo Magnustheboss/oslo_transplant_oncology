@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 // Define the authors to search for
-const AUTHORS_QUERY = '("Line PD"[Author] OR "Dueland S"[Author] OR "Smedman TM"[Author] OR "Yaqub S"[Author] OR "Solheim JM"[Author] OR "Grut H"[Author])';
+// Using a simpler query that is less likely to fail due to URL encoding issues or strict syntax
+const AUTHORS_QUERY = 'Line PD[Author] OR Dueland S[Author] OR Smedman TM[Author] OR Yaqub S[Author] OR Solheim JM[Author] OR Grut H[Author]';
 
 interface Publication {
   uid: string;
@@ -28,11 +29,15 @@ export default function Publications() {
     const fetchPublications = async () => {
       try {
         // Step 1: Search for IDs
-        const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${encodeURIComponent(AUTHORS_QUERY)}&retmode=json&retmax=20&sort=date`;
-        const searchRes = await fetch(searchUrl);
-        if (!searchRes.ok) throw new Error("Failed to fetch search results");
-        const searchData = await searchRes.json();
+        // Using a more robust fetch approach with error handling
+        const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${encodeURIComponent(AUTHORS_QUERY)}&retmode=json&retmax=10&sort=date`;
         
+        const searchRes = await fetch(searchUrl);
+        if (!searchRes.ok) {
+          throw new Error(`Search failed: ${searchRes.status} ${searchRes.statusText}`);
+        }
+        
+        const searchData = await searchRes.json();
         const ids = searchData.esearchresult?.idlist || [];
         
         if (ids.length === 0) {
@@ -44,33 +49,50 @@ export default function Publications() {
         // Step 2: Fetch details for these IDs
         const summaryUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${ids.join(",")}&retmode=json`;
         const summaryRes = await fetch(summaryUrl);
-        if (!summaryRes.ok) throw new Error("Failed to fetch publication details");
+        if (!summaryRes.ok) {
+          throw new Error(`Summary failed: ${summaryRes.status} ${summaryRes.statusText}`);
+        }
+        
         const summaryData = await summaryRes.json();
-
+        
+        // The structure of esummary result can vary, sometimes it's under 'result' key directly
+        const result = summaryData.result || {};
+        
         const fetchedPubs: Publication[] = ids.map((uid: string) => {
-          const item = summaryData.result[uid];
+          const item = result[uid];
           if (!item) return null;
 
-          // Format authors
-          const authorList = item.authors?.map((a: any) => a.name) || [];
+          // Format authors safely
+          const authorList = Array.isArray(item.authors) ? item.authors.map((a: any) => a.name) : [];
           let authorsStr = authorList.slice(0, 5).join(", ");
           if (authorList.length > 5) authorsStr += ", et al.";
 
-          // Find DOI
-          const doi = item.elocationid?.find((e: string) => e.startsWith("doi: "))?.replace("doi: ", "") || 
-                      item.articleids?.find((id: any) => id.idtype === "doi")?.value;
+          // Find DOI safely
+          let doi = "";
+          if (item.elocationid) {
+             // elocationid can be a string or array depending on the record
+             const eloc = item.elocationid;
+             if (typeof eloc === 'string' && eloc.startsWith("doi: ")) {
+               doi = eloc.replace("doi: ", "");
+             }
+          }
+          
+          if (!doi && item.articleids) {
+             const doiObj = item.articleids.find((id: any) => id.idtype === "doi");
+             if (doiObj) doi = doiObj.value;
+          }
 
           return {
             uid,
-            title: item.title,
-            authors: authorsStr,
-            journal: item.source,
-            pubdate: item.pubdate.split(" ")[0], // Extract year
-            epubdate: item.epubdate,
+            title: item.title || "Untitled Publication",
+            authors: authorsStr || "Unknown Authors",
+            journal: item.source || item.fulljournalname || "Unknown Journal",
+            pubdate: (item.pubdate || "").split(" ")[0], 
+            epubdate: item.epubdate || "",
             link: `https://pubmed.ncbi.nlm.nih.gov/${uid}/`,
             doi
           };
-        }).filter(Boolean);
+        }).filter((p: Publication | null): p is Publication => p !== null);
 
         setPublications(fetchedPubs);
       } catch (err) {
