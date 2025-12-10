@@ -9,7 +9,7 @@ const leadership = [
   {
     name: "Pål-Dag Line",
     role: "Group Leader & Professor",
-    image: "/images/pal_dag_line.webp",
+    image: null,
     bio: "Professor of Surgery and Head of the Department of Transplantation Medicine. Pioneer of the SECA trials and the RAPID technique.",
     affiliation: "University of Oslo / OUS"
   }
@@ -19,21 +19,21 @@ const coreMembers = [
   {
     name: "Svein Dueland",
     role: "Consulting Oncologist",
-    image: "/images/svein_dueland.webp",
+    image: null,
     bio: "Key investigator in the SECA trials, focusing on oncological selection criteria and chemotherapy protocols.",
     affiliation: "Oslo University Hospital"
   },
   {
     name: "Tor Magnus Smedman",
     role: "Consulting Oncologist",
-    image: "/images/tor_magnus_smedman.webp",
+    image: null,
     bio: "Specializes in colorectal liver metastases and living donor protocols. Leading the LD-RAPID initiative.",
     affiliation: "Oslo University Hospital"
   },
   {
     name: "Sheraz Yaqub",
     role: "Lead, TESLA Trials",
-    image: "/images/sheraz_yaqub.webp",
+    image: null,
     bio: "Leading the TESLA trial for intrahepatic cholangiocarcinoma. Expert in hepatobiliary surgery and clinical trials.",
     affiliation: "Oslo University Hospital"
   },
@@ -103,19 +103,7 @@ export default function Team() {
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8 justify-center">
               {leadership.map((member, index) => (
                 <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-100 flex flex-col md:flex-row">
-                  <div className="md:w-1/3 h-64 md:h-auto relative bg-slate-200">
-                    {member.image ? (
-                      <img 
-                        src={member.image} 
-                        alt={member.name} 
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-slate-400">
-                        <User className="w-16 h-16" />
-                      </div>
-                    )}
-                  </div>
+                  {/* Image removed as requested */}
                   <div className="p-8 md:w-2/3 flex flex-col justify-center">
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="outline" className="text-primary border-primary/20">{member.role}</Badge>
@@ -143,19 +131,7 @@ export default function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreMembers.map((member, index) => (
               <Card key={index} className="border-slate-200 hover:shadow-md transition-shadow overflow-hidden">
-                <div className="h-64 bg-slate-200 relative">
-                  {member.image ? (
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-full h-full object-cover object-top"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-300">
-                      <User className="w-16 h-16" />
-                    </div>
-                  )}
-                </div>
+                {/* Image removed as requested */}
                 <CardHeader>
                   <div className="mb-2">
                     <span className="text-xs font-semibold text-primary uppercase tracking-wider">{member.role}</span>
