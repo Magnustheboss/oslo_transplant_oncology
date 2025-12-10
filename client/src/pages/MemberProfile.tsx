@@ -4,7 +4,7 @@ import { members, MemberProfile as MemberProfileType } from "@/data/members";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, Building2, Microscope, User } from "lucide-react";
+import { ArrowLeft, BookOpen, Building2, Microscope, User, Linkedin, Twitter, FileText } from "lucide-react";
 import { Link } from "wouter";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -132,7 +132,7 @@ export default function MemberProfile() {
                   {member.role}
                 </Badge>
               </div>
-              <div className="space-y-2 text-lg text-muted-foreground">
+              <div className="space-y-2 text-lg text-muted-foreground mb-6">
                 {member.titles.map((title, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <Building2 className="w-4 h-4" />
@@ -140,6 +140,32 @@ export default function MemberProfile() {
                   </div>
                 ))}
               </div>
+
+              {member.social && (
+                <div className="flex gap-3">
+                  {member.social.linkedin && (
+                    <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:text-[#0077b5] hover:border-[#0077b5]">
+                        <Linkedin className="w-5 h-5" />
+                      </Button>
+                    </a>
+                  )}
+                  {member.social.twitter && (
+                    <a href={member.social.twitter} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:text-black hover:border-black">
+                        <Twitter className="w-5 h-5" />
+                      </Button>
+                    </a>
+                  )}
+                  {member.social.orcid && (
+                    <a href={`https://orcid.org/${member.social.orcid}`} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:text-[#A6CE39] hover:border-[#A6CE39]">
+                        <span className="font-bold text-xs">iD</span>
+                      </Button>
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

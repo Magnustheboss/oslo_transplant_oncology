@@ -14,6 +14,11 @@ export interface MemberProfile {
   projects: Project[];
   pubmedSearchTerm: string;
   image?: string;
+  social?: {
+    orcid?: string;
+    linkedin?: string;
+    twitter?: string;
+  };
 }
 
 export const members: MemberProfile[] = [
@@ -45,7 +50,12 @@ export const members: MemberProfile[] = [
         role: "Innovator & Lead Surgeon"
       }
     ],
-    pubmedSearchTerm: "Line PD[Author] AND (Oslo[Affiliation] OR Transplant[Title/Abstract])"
+    pubmedSearchTerm: "Line PD[Author] AND (Oslo[Affiliation] OR Transplant[Title/Abstract])",
+    social: {
+      orcid: "0000-0002-5884-9336",
+      linkedin: "https://no.linkedin.com/in/p%C3%A5l-dag-line-42966312",
+      twitter: "https://x.com/pdline"
+    }
   },
   {
     id: "svein-dueland",
@@ -74,7 +84,10 @@ export const members: MemberProfile[] = [
         role: "Researcher"
       }
     ],
-    pubmedSearchTerm: "Dueland S[Author] AND (Oslo[Affiliation] OR Cancer[Title/Abstract])"
+    pubmedSearchTerm: "Dueland S[Author] AND (Oslo[Affiliation] OR Cancer[Title/Abstract])",
+    social: {
+      linkedin: "https://www.linkedin.com/in/svein-dueland-b5b8b813"
+    }
   },
   {
     id: "sheraz-yaqub",
@@ -105,7 +118,11 @@ export const members: MemberProfile[] = [
         role: "Investigator"
       }
     ],
-    pubmedSearchTerm: "Yaqub S[Author] AND (Oslo[Affiliation] OR Liver[Title/Abstract])"
+    pubmedSearchTerm: "Yaqub S[Author] AND (Oslo[Affiliation] OR Liver[Title/Abstract])",
+    social: {
+      twitter: "https://x.com/YaqubSheraz",
+      linkedin: "https://www.linkedin.com/in/sheraz-yaqub-786"
+    }
   },
   {
     id: "tor-magnus-smedman",
@@ -134,7 +151,11 @@ export const members: MemberProfile[] = [
         role: "Researcher"
       }
     ],
-    pubmedSearchTerm: "Smedman TM[Author] OR Smedman T[Author]"
+    pubmedSearchTerm: "Smedman TM[Author] OR Smedman T[Author]",
+    social: {
+      twitter: "https://x.com/Smedman_MD",
+      orcid: "0000-0002-1531-1229"
+    }
   },
   {
     id: "morten-hagness",
@@ -158,6 +179,10 @@ export const members: MemberProfile[] = [
         role: "Investigator"
       }
     ],
-    pubmedSearchTerm: "Hagness M[Author] AND (Oslo[Affiliation] OR Transplant[Title/Abstract])"
+    pubmedSearchTerm: "Hagness M[Author] AND (Oslo[Affiliation] OR Transplant[Title/Abstract])",
+    social: {
+      twitter: "https://x.com/HagnessMorten",
+      linkedin: "https://no.linkedin.com/in/morten-hagness-83b862220"
+    }
   }
 ];
