@@ -43,20 +43,7 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                        <Mail className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-slate-900 mb-1">Email</h4>
-                        <p className="text-slate-600">
-                          transplant-oncology@ous-hf.no
-                        </p>
-                        <p className="text-xs text-slate-400 mt-1">
-                          For general inquiries and research collaboration
-                        </p>
-                      </div>
-                    </div>
+                    {/* Email removed as per request */}
 
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
