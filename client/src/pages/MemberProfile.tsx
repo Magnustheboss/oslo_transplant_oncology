@@ -111,12 +111,13 @@ export default function MemberProfile() {
           </Link>
           
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 border-4 border-background shadow-xl">
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 border-4 border-background shadow-xl overflow-hidden">
               {member.image ? (
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full rounded-full object-cover"
+                <div
+                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${member.image})` }}
+                  role="img"
+                  aria-label={member.name}
                 />
               ) : (
                 <User className="w-16 h-16 md:w-24 md:h-24 text-primary/40" />
