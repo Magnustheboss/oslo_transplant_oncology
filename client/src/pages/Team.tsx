@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 // Team data structure
 const leadership = [
   {
+    id: "pal-dag-line",
     name: "Pål-Dag Line",
     role: "Group Leader & Professor",
     image: null,
@@ -17,6 +18,7 @@ const leadership = [
 
 const coreMembers = [
   {
+    id: "svein-dueland",
     name: "Svein Dueland",
     role: "Consulting Oncologist",
     image: null,
@@ -24,6 +26,7 @@ const coreMembers = [
     affiliation: "Oslo University Hospital"
   },
   {
+    id: "tor-magnus-smedman",
     name: "Tor Magnus Smedman",
     role: "Consulting Oncologist",
     image: null,
@@ -31,6 +34,7 @@ const coreMembers = [
     affiliation: "Oslo University Hospital"
   },
   {
+    id: "sheraz-yaqub",
     name: "Sheraz Yaqub",
     role: "Lead, TESLA Trials",
     image: null,
@@ -38,6 +42,7 @@ const coreMembers = [
     affiliation: "Oslo University Hospital"
   },
   {
+    id: "morten-hagness",
     name: "Morten Hagness",
     role: "Transplant Surgeon",
     image: null,
@@ -117,12 +122,19 @@ export default function Team() {
                     </div>
                     <h3 className="text-3xl font-bold text-slate-900 mb-4">{member.name}</h3>
                     <p className="text-slate-600 text-lg mb-6">{member.bio}</p>
-                    <div className="flex items-center gap-4 text-sm text-slate-500">
+                    <div className="flex items-center gap-4 text-sm text-slate-500 mb-6">
                       <div className="flex items-center gap-2">
                         <GraduationCap className="w-4 h-4" />
                         {member.affiliation}
                       </div>
                     </div>
+                    {member.id && (
+                      <Link href={`/team/${member.id}`}>
+                        <Button variant="outline" className="w-fit">
+                          View Full Profile <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
@@ -148,10 +160,17 @@ export default function Team() {
                     <GraduationCap className="w-3 h-3" /> {member.affiliation}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                <CardContent className="flex flex-col h-full">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
                     {member.bio}
                   </p>
+                  {member.id && (
+                    <Link href={`/team/${member.id}`}>
+                      <Button variant="ghost" className="w-full justify-between hover:bg-primary/5 hover:text-primary group-hover:text-primary">
+                        View Profile <ArrowRight className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                  )}
                 </CardContent>
               </Card>
             ))}

@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Research from "@/pages/Research";
 import Team from "@/pages/Team";
+import MemberProfile from "@/pages/MemberProfile";
 import Publications from "@/pages/Publications";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
@@ -21,6 +22,7 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/research" component={Research} />
           <Route path="/team" component={Team} />
+          <Route path="/team/:id" component={MemberProfile} />
           <Route path="/publications" component={Publications} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
