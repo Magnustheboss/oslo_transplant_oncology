@@ -18,6 +18,7 @@ export interface MemberProfile {
     orcid?: string;
     linkedin?: string;
     twitter?: string;
+    researchgate?: string;
   };
 }
 
@@ -54,7 +55,8 @@ export const members: MemberProfile[] = [
     social: {
       orcid: "0000-0002-5884-9336",
       linkedin: "https://no.linkedin.com/in/p%C3%A5l-dag-line-42966312",
-      twitter: "https://x.com/pdline"
+      twitter: "https://x.com/pdline",
+      researchgate: "https://www.researchgate.net/profile/Pal-Dag-Line"
     }
   },
   {
@@ -86,7 +88,8 @@ export const members: MemberProfile[] = [
     ],
     pubmedSearchTerm: "Dueland S[Author] AND (Oslo[Affiliation] OR Cancer[Title/Abstract])",
     social: {
-      linkedin: "https://www.linkedin.com/in/svein-dueland-b5b8b813"
+      linkedin: "https://www.linkedin.com/in/svein-dueland-b5b8b813",
+      researchgate: "https://www.researchgate.net/profile/Svein-Dueland"
     }
   },
   {
@@ -121,7 +124,8 @@ export const members: MemberProfile[] = [
     pubmedSearchTerm: "Yaqub S[Author] AND (Oslo[Affiliation] OR Liver[Title/Abstract])",
     social: {
       twitter: "https://x.com/YaqubSheraz",
-      linkedin: "https://www.linkedin.com/in/sheraz-yaqub-786"
+      linkedin: "https://www.linkedin.com/in/sheraz-yaqub-786",
+      researchgate: "https://www.researchgate.net/profile/Sheraz-Yaqub-2"
     }
   },
   {
@@ -154,7 +158,8 @@ export const members: MemberProfile[] = [
     pubmedSearchTerm: "Smedman TM[Author] OR Smedman T[Author]",
     social: {
       twitter: "https://x.com/Smedman_MD",
-      orcid: "0000-0002-1531-1229"
+      orcid: "0000-0002-1531-1229",
+      researchgate: "https://www.researchgate.net/profile/Tor-Magnus-Smedman"
     }
   },
   {
@@ -182,7 +187,8 @@ export const members: MemberProfile[] = [
     pubmedSearchTerm: "Hagness M[Author] AND (Oslo[Affiliation] OR Transplant[Title/Abstract])",
     social: {
       twitter: "https://x.com/HagnessMorten",
-      linkedin: "https://no.linkedin.com/in/morten-hagness-83b862220"
+      linkedin: "https://no.linkedin.com/in/morten-hagness-83b862220",
+      researchgate: "https://www.researchgate.net/profile/Morten-Hagness-2"
     }
   }
 ];

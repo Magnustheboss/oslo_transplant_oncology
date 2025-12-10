@@ -82,6 +82,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social Feed */}
+      <section className="py-24 bg-white border-b border-slate-100">
+        <div className="container">
+          <div className="flex flex-col md:flex-row gap-12">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-6">Latest Updates</h2>
+              <p className="text-lg text-slate-600 mb-8">
+                Follow our latest research updates, conference presentations, and publications on X (formerly Twitter).
+              </p>
+              <div className="h-[500px] overflow-y-auto border border-slate-200 rounded-xl shadow-sm">
+                <a 
+                  className="twitter-timeline" 
+                  data-height="500" 
+                  data-theme="light"
+                  href="https://twitter.com/pdline?ref_src=twsrc%5Etfw"
+                >
+                  Tweets by pdline
+                </a>
+              </div>
+            </div>
+            <div className="md:w-1/2 flex flex-col justify-center">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Connect With Us</h3>
+                <p className="text-slate-600 mb-6">
+                  Our team is active on social media platforms, sharing insights on transplant oncology, surgical innovations, and clinical trial results.
+                </p>
+                <div className="space-y-4">
+                  <a href="https://x.com/pdline" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900">Follow Pål-Dag Line</div>
+                      <div className="text-sm text-slate-500">@pdline</div>
+                    </div>
+                    <ArrowRight className="ml-auto w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
+                  </a>
+                  
+                  <a href="https://x.com/Smedman_MD" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900">Follow Magnus Smedman</div>
+                      <div className="text-sm text-slate-500">@Smedman_MD</div>
+                    </div>
+                    <ArrowRight className="ml-auto w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Research Highlights */}
       <section className="py-24 bg-slate-50">
         <div className="container">

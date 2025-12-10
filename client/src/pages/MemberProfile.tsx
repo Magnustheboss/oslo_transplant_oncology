@@ -4,7 +4,7 @@ import { members, MemberProfile as MemberProfileType } from "@/data/members";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, Building2, Microscope, User, Linkedin, Twitter, FileText } from "lucide-react";
+import { ArrowLeft, BookOpen, Building2, Microscope, User, Linkedin, Twitter, FileText, Globe } from "lucide-react";
 import { Link } from "wouter";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -161,6 +161,13 @@ export default function MemberProfile() {
                     <a href={`https://orcid.org/${member.social.orcid}`} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="icon" className="rounded-full hover:text-[#A6CE39] hover:border-[#A6CE39]">
                         <span className="font-bold text-xs">iD</span>
+                      </Button>
+                    </a>
+                  )}
+                  {member.social.researchgate && (
+                    <a href={member.social.researchgate} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:text-[#00CCBB] hover:border-[#00CCBB]">
+                        <span className="font-bold text-xs">RG</span>
                       </Button>
                     </a>
                   )}
