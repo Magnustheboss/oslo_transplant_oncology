@@ -188,10 +188,8 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
               <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-              <div className="relative z-10 grid grid-cols-2 gap-4">
-                <img src="/pal_dag_line.webp" alt="Prof. Pål-Dag Line" className="rounded-2xl shadow-lg w-full h-64 object-cover object-top" />
+              <div className="relative z-10 grid grid-cols-1 gap-4">
                 <div className="space-y-4 mt-12">
-                  <img src="/svein_dueland.webp" alt="Dr. Svein Dueland" className="rounded-2xl shadow-lg w-full h-48 object-cover" />
                   <div className="bg-slate-900 p-6 rounded-2xl text-white shadow-xl">
                     <div className="text-3xl font-bold text-accent mb-1">20+</div>
                     <div className="text-sm text-slate-300">Years of Experience</div>
