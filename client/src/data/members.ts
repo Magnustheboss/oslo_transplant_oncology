@@ -22,6 +22,8 @@ export interface MemberProfile {
   };
 }
 
+import { memberImages } from "./memberImages";
+
 export const members: MemberProfile[] = [
   {
     id: "pal-dag-line",
@@ -32,7 +34,7 @@ export const members: MemberProfile[] = [
       "Head of Department of Transplantation Medicine, Oslo University Hospital"
     ],
     bio: "Professor Pål-Dag Line is the leader of the Transplant Oncology Research Group at Oslo University Hospital. He has pioneered the concept of liver transplantation for non-resectable liver metastases from colorectal cancer, initiating the groundbreaking SECA trials. His innovative work includes the development of the RAPID procedure (Resection and Partial Liver Segment 2/3 Transplantation with Delayed Total Hepatectomy), a novel surgical strategy to expand the donor pool. His research focuses on pushing the boundaries of transplant oncology to offer curative treatment options for patients with otherwise terminal malignancies.",
-    image: "/assets/media/content_01.jpg",
+    image: memberImages["content_01"],
     researchInterests: [
       "Liver transplantation for colorectal liver metastases",
       "Transplant oncology",
@@ -69,7 +71,7 @@ export const members: MemberProfile[] = [
       "PhD"
     ],
     bio: "Dr. Svein Dueland is a leading oncologist specializing in gastrointestinal cancers. He has been instrumental in the SECA trials, providing the oncological expertise required to select and manage patients for liver transplantation. His research has been pivotal in demonstrating the long-term survival benefits of transplantation compared to chemotherapy alone for patients with colorectal liver metastases. He actively publishes on prognostic factors and patient selection criteria to optimize outcomes in transplant oncology.",
-    image: "/assets/media/content_02.jpg",
+    image: memberImages["content_02"],
     researchInterests: [
       "Colorectal cancer liver metastases",
       "Systemic chemotherapy and immunotherapy",
@@ -104,7 +106,7 @@ export const members: MemberProfile[] = [
       "PhD, FEBS"
     ],
     bio: "Dr. Sheraz Yaqub is a Senior Consultant Surgeon specializing in Hepatopancreatobiliary (HPB) surgery. He leads the TESLA trial, investigating liver transplantation for non-resectable intrahepatic cholangiocarcinoma. He is also a key investigator in the EXCALIBUR trial. His work bridges the gap between advanced liver resection techniques and transplantation, focusing on multimodal treatment strategies for complex hepatobiliary malignancies.",
-    image: "/assets/media/content_03.jpg",
+    image: memberImages["content_03"],
     researchInterests: [
       "Intrahepatic cholangiocarcinoma",
       "Colorectal liver metastases",
@@ -140,7 +142,7 @@ export const members: MemberProfile[] = [
       "PhD"
     ],
     bio: "Dr. Tor Magnus Smedman is a dedicated oncologist within the Transplant Oncology Research Group. His PhD thesis focused on liver transplantation for non-resectable liver metastases, contributing significantly to the SECA-II arm D study. He is actively involved in research concerning donor selection, including the use of extended criteria donors, and the quality of life of transplant recipients. His work helps refine the protocols for expanding the applicability of transplant oncology.",
-    image: "/assets/media/content_04.jpg",
+    image: memberImages["content_04"],
     researchInterests: [
       "Liver transplantation for colorectal liver metastases",
       "Extended criteria donors",
@@ -175,7 +177,7 @@ export const members: MemberProfile[] = [
       "PhD, FEBS"
     ],
     bio: "Dr. Morten Hagness is the Head of the Department of Transplant Surgery and a core member of the research group. He has been involved since the inception of the SECA-I trial. His research encompasses the surgical aspects of liver transplantation, immunosuppression management, and long-term outcomes of transplant recipients. He plays a crucial role in the surgical execution and perioperative management of patients in the group's clinical trials.",
-    image: "/assets/media/content_05.jpg",
+    image: memberImages["content_05"],
     researchInterests: [
       "Liver transplantation surgery",
       "Immunosuppression",
