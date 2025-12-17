@@ -195,7 +195,7 @@ export default function Research() {
                           <Badge className="bg-primary text-white border-none">Recruiting</Badge>
                           <span className="text-slate-400 font-mono text-sm">NCT04556214</span>
                         </div>
-                        <h3 className="text-2xl font-bold mb-2">TESLA Trial</h3>
+                        <h3 className="text-2xl font-bold mb-2" id="tesla">TESLA Trial</h3>
                         <p className="text-slate-300">
                           Liver Transplantation for Non-Resectable Intrahepatic Cholangiocarcinoma
                         </p>
@@ -225,6 +225,57 @@ export default function Research() {
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> No extrahepatic disease (PET-CT negative)</li>
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> Stable disease on chemo &gt; 6 months</li>
                           </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SURE-LT Trial */}
+                    <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm mb-8">
+                      <div className="bg-emerald-900 text-white p-8">
+                        <div className="flex items-center gap-3 mb-4">
+                          <Badge className="bg-emerald-500 text-white border-none">Recruiting</Badge>
+                          <span className="text-emerald-200 font-mono text-sm">NCT06850753</span>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-2" id="sure-lt">SURE-LT</h3>
+                        <p className="text-emerald-100">
+                          SUperior Right Exenteration and Liver Transplantation for Locally Advanced Perihilar Cholangiocarcinoma
+                        </p>
+                      </div>
+                      <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                          <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <Microscope className="w-4 h-4 text-emerald-600" />
+                            Novel Surgical Approach
+                          </h4>
+                          <p className="text-sm text-slate-600 mb-4">
+                            A radical "en bloc" resection of the spleen, pancreas, duodenum, and liver, followed by liver transplantation. This approach aims to achieve R0 resection in locally advanced cases where standard resection is not possible.
+                          </p>
+                          <h4 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <Activity className="w-4 h-4 text-emerald-600" />
+                            Study Design
+                          </h4>
+                          <p className="text-sm text-slate-600">
+                            Single-arm prospective clinical trial. Primary endpoint: Feasibility, safety, and recurrence-free survival.
+                          </p>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-slate-900 mb-3">Key Inclusion Criteria</h4>
+                          <ul className="space-y-2 text-sm text-slate-600">
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" /> Perihilar CCA not eligible for resection or standard LT</li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" /> No distant metastasis or M1 lymph node involvement</li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" /> Response/stable disease after 6 months of chemoradiotherapy</li>
+                            <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" /> De-novo pCCA in PSC patients may be considered</li>
+                          </ul>
+                          <div className="mt-6 pt-6 border-t border-slate-100">
+                            <a 
+                              href="https://clinicaltrials.gov/study/NCT06850753" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-emerald-700 font-semibold hover:text-emerald-800 hover:underline text-sm"
+                            >
+                              View on ClinicalTrials.gov <BookOpen className="ml-2 w-4 h-4" />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>

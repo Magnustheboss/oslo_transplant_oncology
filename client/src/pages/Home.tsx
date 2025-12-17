@@ -140,7 +140,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* SECA-II Card */}
             <Card className="group border-none shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-white h-full flex flex-col">
               <div className="h-48 overflow-hidden relative">
@@ -196,24 +196,50 @@ export default function Home() {
             {/* TESLA Card */}
             <Card className="group border-none shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-white h-full flex flex-col">
               <div className="h-48 overflow-hidden relative">
-                <div className="absolute inset-0 bg-slate-800/90 mix-blend-multiply z-10" />
-                <img src="/images/collaboration-network.jpg" alt="TESLA" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-slate-800/80 mix-blend-multiply z-10" />
+                <img src="/images/tesla-trial.jpg" alt="TESLA" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute bottom-4 left-4 z-20">
                   <Badge className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-md">
-                    New Frontier
+                    Multicenter
                   </Badge>
                 </div>
               </div>
               <CardContent className="p-8 flex-grow flex flex-col">
                 <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
-                  TESLA Trials
+                  TESLA trials
                 </h3>
                 <p className="text-slate-600 mb-6 flex-grow">
-                  Investigating liver transplantation for locally advanced non-resectable intrahepatic cholangiocarcinoma treated with neoadjuvant therapy.
+                  Liver transplantation for non-resectable intrahepatic cholangiocarcinoma: A prospective exploratory trial.
                 </p>
                 <Link href="/research#tesla">
                   <span className="inline-flex items-center text-sm font-bold text-primary group-hover:underline underline-offset-4">
-                    View Results <ChevronRight className="ml-1 w-4 h-4" />
+                    Learn More <ChevronRight className="ml-1 w-4 h-4" />
+                  </span>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* SURE-LT Card */}
+            <Card className="group border-none shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-white h-full flex flex-col">
+              <div className="h-48 overflow-hidden relative">
+                <div className="absolute inset-0 bg-emerald-800/80 mix-blend-multiply z-10" />
+                <img src="/images/surgical-precision.jpg" alt="SURE-LT" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute bottom-4 left-4 z-20">
+                  <Badge className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-md">
+                    New Protocol
+                  </Badge>
+                </div>
+              </div>
+              <CardContent className="p-8 flex-grow flex flex-col">
+                <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                  SURE-LT
+                </h3>
+                <p className="text-slate-600 mb-6 flex-grow">
+                  A novel transplant approach for locally advanced unresectable perihilar cholangiocarcinoma.
+                </p>
+                <Link href="/research#sure-lt">
+                  <span className="inline-flex items-center text-sm font-bold text-primary group-hover:underline underline-offset-4">
+                    Learn More <ChevronRight className="ml-1 w-4 h-4" />
                   </span>
                 </Link>
               </CardContent>
