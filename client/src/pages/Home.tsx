@@ -1,38 +1,11 @@
 import { Link } from "wouter";
-import { useState, useEffect } from "react";
+
 import { ArrowRight, FileText, Users, Activity, Globe, Calendar, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-declare global {
-  interface Window {
-    twttr: any;
-  }
-}
-
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'pdline' | 'smedman'>('pdline');
-
-  const [twitterLoaded, setTwitterLoaded] = useState(false);
-
-  useEffect(() => {
-    // Re-initialize Twitter widgets when tab changes
-    if (window.twttr && window.twttr.widgets) {
-      window.twttr.widgets.load();
-      setTwitterLoaded(true);
-    }
-
-    // Check if twitter script loaded successfully
-    const checkTwitter = setTimeout(() => {
-      const frames = document.querySelectorAll('iframe[id^="twitter-widget"]');
-      if (frames.length > 0) {
-        setTwitterLoaded(true);
-      }
-    }, 2000);
-
-    return () => clearTimeout(checkTwitter);
-  }, [activeTab]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -114,76 +87,8 @@ export default function Home() {
       {/* Social Feed */}
       <section className="py-24 bg-white border-b border-slate-100">
         <div className="container">
-          <div className="flex flex-col md:flex-row gap-12">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-6">Latest Updates</h2>
-              <p className="text-lg text-slate-600 mb-8">
-                Follow our latest research updates, conference presentations, and publications on X (formerly Twitter).
-              </p>
-              <div className="border border-slate-200 rounded-xl shadow-sm overflow-hidden bg-white">
-                <div className="flex border-b border-slate-100">
-                  <button 
-                    className={`flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 ${
-                      activeTab === 'pdline' 
-                        ? 'border-primary text-primary' 
-                        : 'border-transparent text-slate-500'
-                    }`}
-                    onClick={() => setActiveTab('pdline')}
-                  >
-                    @pdline
-                  </button>
-                  <button 
-                    className={`flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 ${
-                      activeTab === 'smedman' 
-                        ? 'border-primary text-primary' 
-                        : 'border-transparent text-slate-500'
-                    }`}
-                    onClick={() => setActiveTab('smedman')}
-                  >
-                    @Smedman_MD
-                  </button>
-                </div>
-                <div className="h-[500px] overflow-y-auto bg-white relative p-4">
-                  {!twitterLoaded && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-50 p-6 text-center z-10">
-                      <p className="text-slate-500 mb-4">
-                        Unable to load Twitter feed directly. This may be due to browser privacy settings or ad blockers.
-                      </p>
-                      <Button asChild variant="outline">
-                        <a 
-                          href={activeTab === 'pdline' ? "https://twitter.com/pdline" : "https://twitter.com/Smedman_MD"} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          View Tweets on X (Twitter) <ArrowRight className="ml-2 w-4 h-4" />
-                        </a>
-                      </Button>
-                    </div>
-                  )}
-                  <div className={activeTab === 'pdline' ? 'block' : 'hidden'}>
-                    <a 
-                      className="twitter-timeline" 
-                      data-height="500" 
-                      data-theme="light"
-                      href="https://twitter.com/pdline?ref_src=twsrc%5Etfw"
-                    >
-                      Tweets by pdline
-                    </a>
-                  </div>
-                  <div className={activeTab === 'smedman' ? 'block' : 'hidden'}>
-                    <a 
-                      className="twitter-timeline" 
-                      data-height="500" 
-                      data-theme="light"
-                      href="https://twitter.com/Smedman_MD?ref_src=twsrc%5Etfw"
-                    >
-                      Tweets by Smedman_MD
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="md:w-1/2 flex flex-col justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <div className="max-w-2xl w-full">
               <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Connect With Us</h3>
                 <p className="text-slate-600 mb-6">
