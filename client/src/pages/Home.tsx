@@ -91,15 +91,67 @@ export default function Home() {
               <p className="text-lg text-slate-600 mb-8">
                 Follow our latest research updates, conference presentations, and publications on X (formerly Twitter).
               </p>
-              <div className="h-[500px] overflow-y-auto border border-slate-200 rounded-xl shadow-sm">
-                <a 
-                  className="twitter-timeline" 
-                  data-height="500" 
-                  data-theme="light"
-                  href="https://twitter.com/pdline?ref_src=twsrc%5Etfw"
-                >
-                  Tweets by pdline
-                </a>
+              <div className="border border-slate-200 rounded-xl shadow-sm overflow-hidden bg-white">
+                <div className="flex border-b border-slate-100">
+                  <button 
+                    className="flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 border-primary text-primary"
+                    onClick={(e) => {
+                      const parent = e.currentTarget.parentElement?.parentElement;
+                      if (parent) {
+                        parent.querySelectorAll('.twitter-feed').forEach(el => el.classList.add('hidden'));
+                        parent.querySelector('#feed-pdline')?.classList.remove('hidden');
+                        parent.querySelectorAll('button').forEach(b => {
+                          b.classList.remove('border-primary', 'text-primary');
+                          b.classList.add('border-transparent', 'text-slate-500');
+                        });
+                        e.currentTarget.classList.remove('border-transparent', 'text-slate-500');
+                        e.currentTarget.classList.add('border-primary', 'text-primary');
+                      }
+                    }}
+                  >
+                    @pdline
+                  </button>
+                  <button 
+                    className="flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 border-transparent text-slate-500"
+                    onClick={(e) => {
+                      const parent = e.currentTarget.parentElement?.parentElement;
+                      if (parent) {
+                        parent.querySelectorAll('.twitter-feed').forEach(el => el.classList.add('hidden'));
+                        parent.querySelector('#feed-smedman')?.classList.remove('hidden');
+                        parent.querySelectorAll('button').forEach(b => {
+                          b.classList.remove('border-primary', 'text-primary');
+                          b.classList.add('border-transparent', 'text-slate-500');
+                        });
+                        e.currentTarget.classList.remove('border-transparent', 'text-slate-500');
+                        e.currentTarget.classList.add('border-primary', 'text-primary');
+                      }
+                    }}
+                  >
+                    @Smedman_MD
+                  </button>
+                </div>
+                <div className="h-[500px] overflow-y-auto bg-white relative">
+                  <div id="feed-pdline" className="twitter-feed">
+                    <a 
+                      className="twitter-timeline" 
+                      data-height="500" 
+                      data-theme="light"
+                      href="https://twitter.com/pdline?ref_src=twsrc%5Etfw"
+                    >
+                      Tweets by pdline
+                    </a>
+                  </div>
+                  <div id="feed-smedman" className="twitter-feed hidden">
+                    <a 
+                      className="twitter-timeline" 
+                      data-height="500" 
+                      data-theme="light"
+                      href="https://twitter.com/Smedman_MD?ref_src=twsrc%5Etfw"
+                    >
+                      Tweets by Smedman_MD
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="md:w-1/2 flex flex-col justify-center">
