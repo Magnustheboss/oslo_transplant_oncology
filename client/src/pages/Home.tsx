@@ -220,7 +220,7 @@ export default function Home() {
               </div>
               <CardContent className="p-8 flex-grow flex flex-col">
                 <h3 className="text-2xl font-heading font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
-                  TESLA Trial
+                  TESLA Trials
                 </h3>
                 <p className="text-slate-600 mb-6 flex-grow">
                   Investigating liver transplantation for locally advanced non-resectable intrahepatic cholangiocarcinoma treated with neoadjuvant therapy.
