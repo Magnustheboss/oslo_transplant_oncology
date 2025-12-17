@@ -1,12 +1,28 @@
 import { Link } from "wouter";
-import { ArrowRight, Activity, Users, Globe, ChevronRight, FileText } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowRight, FileText, Users, Activity, Globe, Calendar, ChevronDown, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
+declare global {
+  interface Window {
+    twttr: any;
+  }
+}
+
 export default function Home() {
+  const [activeTab, setActiveTab] = useState<'pdline' | 'smedman'>('pdline');
+
+  useEffect(() => {
+    // Re-initialize Twitter widgets when tab changes
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load();
+    }
+  }, [activeTab]);
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
@@ -94,44 +110,28 @@ export default function Home() {
               <div className="border border-slate-200 rounded-xl shadow-sm overflow-hidden bg-white">
                 <div className="flex border-b border-slate-100">
                   <button 
-                    className="flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 border-primary text-primary"
-                    onClick={(e) => {
-                      const parent = e.currentTarget.parentElement?.parentElement;
-                      if (parent) {
-                        parent.querySelectorAll('.twitter-feed').forEach(el => el.classList.add('hidden'));
-                        parent.querySelector('#feed-pdline')?.classList.remove('hidden');
-                        parent.querySelectorAll('button').forEach(b => {
-                          b.classList.remove('border-primary', 'text-primary');
-                          b.classList.add('border-transparent', 'text-slate-500');
-                        });
-                        e.currentTarget.classList.remove('border-transparent', 'text-slate-500');
-                        e.currentTarget.classList.add('border-primary', 'text-primary');
-                      }
-                    }}
+                    className={`flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 ${
+                      activeTab === 'pdline' 
+                        ? 'border-primary text-primary' 
+                        : 'border-transparent text-slate-500'
+                    }`}
+                    onClick={() => setActiveTab('pdline')}
                   >
                     @pdline
                   </button>
                   <button 
-                    className="flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 border-transparent text-slate-500"
-                    onClick={(e) => {
-                      const parent = e.currentTarget.parentElement?.parentElement;
-                      if (parent) {
-                        parent.querySelectorAll('.twitter-feed').forEach(el => el.classList.add('hidden'));
-                        parent.querySelector('#feed-smedman')?.classList.remove('hidden');
-                        parent.querySelectorAll('button').forEach(b => {
-                          b.classList.remove('border-primary', 'text-primary');
-                          b.classList.add('border-transparent', 'text-slate-500');
-                        });
-                        e.currentTarget.classList.remove('border-transparent', 'text-slate-500');
-                        e.currentTarget.classList.add('border-primary', 'text-primary');
-                      }
-                    }}
+                    className={`flex-1 py-3 text-sm font-medium text-center hover:bg-slate-50 transition-colors border-b-2 ${
+                      activeTab === 'smedman' 
+                        ? 'border-primary text-primary' 
+                        : 'border-transparent text-slate-500'
+                    }`}
+                    onClick={() => setActiveTab('smedman')}
                   >
                     @Smedman_MD
                   </button>
                 </div>
                 <div className="h-[500px] overflow-y-auto bg-white relative">
-                  <div id="feed-pdline" className="twitter-feed">
+                  <div className={activeTab === 'pdline' ? 'block' : 'hidden'}>
                     <a 
                       className="twitter-timeline" 
                       data-height="500" 
@@ -141,7 +141,7 @@ export default function Home() {
                       Tweets by pdline
                     </a>
                   </div>
-                  <div id="feed-smedman" className="twitter-feed hidden">
+                  <div className={activeTab === 'smedman' ? 'block' : 'hidden'}>
                     <a 
                       className="twitter-timeline" 
                       data-height="500" 
