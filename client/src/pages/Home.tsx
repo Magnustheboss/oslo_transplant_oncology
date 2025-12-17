@@ -14,11 +14,24 @@ declare global {
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'pdline' | 'smedman'>('pdline');
 
+  const [twitterLoaded, setTwitterLoaded] = useState(false);
+
   useEffect(() => {
     // Re-initialize Twitter widgets when tab changes
     if (window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load();
+      setTwitterLoaded(true);
     }
+
+    // Check if twitter script loaded successfully
+    const checkTwitter = setTimeout(() => {
+      const frames = document.querySelectorAll('iframe[id^="twitter-widget"]');
+      if (frames.length > 0) {
+        setTwitterLoaded(true);
+      }
+    }, 2000);
+
+    return () => clearTimeout(checkTwitter);
   }, [activeTab]);
 
   return (
@@ -130,7 +143,23 @@ export default function Home() {
                     @Smedman_MD
                   </button>
                 </div>
-                <div className="h-[500px] overflow-y-auto bg-white relative">
+                <div className="h-[500px] overflow-y-auto bg-white relative p-4">
+                  {!twitterLoaded && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-50 p-6 text-center z-10">
+                      <p className="text-slate-500 mb-4">
+                        Unable to load Twitter feed directly. This may be due to browser privacy settings or ad blockers.
+                      </p>
+                      <Button asChild variant="outline">
+                        <a 
+                          href={activeTab === 'pdline' ? "https://twitter.com/pdline" : "https://twitter.com/Smedman_MD"} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          View Tweets on X (Twitter) <ArrowRight className="ml-2 w-4 h-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  )}
                   <div className={activeTab === 'pdline' ? 'block' : 'hidden'}>
                     <a 
                       className="twitter-timeline" 
