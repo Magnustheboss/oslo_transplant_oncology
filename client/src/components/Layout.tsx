@@ -250,6 +250,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
         <div className="container mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>&copy; {new Date().getFullYear()} Oslo Transplant Oncology Group. All rights reserved.</p>
+          <p>Site created by Tor Magnus Smedman</p>
           <div className="flex gap-6">
             <span className="hover:text-slate-300 cursor-pointer transition-colors">Privacy Policy</span>
             <span className="hover:text-slate-300 cursor-pointer transition-colors">Terms of Use</span>

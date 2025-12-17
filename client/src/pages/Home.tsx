@@ -337,7 +337,7 @@ export default function Home() {
                   </h3>
                   <p className="text-slate-500 text-sm mb-2">Yaqub et al. • British Journal of Surgery • 2025</p>
                   <p className="text-slate-600 text-sm line-clamp-2">
-                    Early results from the TESLA trial showing promising outcomes for selected patients with intrahepatic cholangiocarcinoma.
+                    Early results from the TESLA trials showing promising outcomes for selected patients with intrahepatic cholangiocarcinoma.
                   </p>
                 </div>
               </div>
