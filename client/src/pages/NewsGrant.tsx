@@ -64,6 +64,61 @@ export default function NewsGrant() {
               </Card>
             </div>
 
+            <h2>Project Timeline</h2>
+            <p>
+              The project is structured with clear milestones over the next four years to ensure systematic progress and timely dissemination of results.
+            </p>
+            
+            <div className="not-prose my-12 relative border-l-2 border-slate-200 ml-4 md:ml-8 space-y-12">
+              {/* Q1 2026 */}
+              <div className="relative pl-8 md:pl-12">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm" />
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                  <Badge variant="outline" className="w-fit border-primary/30 text-primary bg-primary/5">Q1 2026</Badge>
+                  <h4 className="text-lg font-bold text-slate-900">Project Initiation</h4>
+                </div>
+                <p className="text-slate-600">
+                  Initiation of patient recruitment for the LD-RAPID trial. Launch of extended SECA-II follow-up and updated survival analyses.
+                </p>
+              </div>
+
+              {/* Q1-Q3 2026 */}
+              <div className="relative pl-8 md:pl-12">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-sm" />
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                  <Badge variant="outline" className="w-fit border-slate-300 text-slate-600">Q1-Q3 2026</Badge>
+                  <h4 className="text-lg font-bold text-slate-900">Biomarker Integration</h4>
+                </div>
+                <p className="text-slate-600">
+                  Comprehensive integration of ctDNA extraction, sequencing, and correlation with clinical endpoints across both cohorts.
+                </p>
+              </div>
+
+              {/* Q4 2027 */}
+              <div className="relative pl-8 md:pl-12">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-sm" />
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                  <Badge variant="outline" className="w-fit border-slate-300 text-slate-600">Q4 2027</Badge>
+                  <h4 className="text-lg font-bold text-slate-900">Interim Analysis</h4>
+                </div>
+                <p className="text-slate-600">
+                  Interim analysis of clinical and biomarker data, including ctDNA-based risk stratification and early outcome reporting of donor morbidity in the LD-RAPID trial.
+                </p>
+              </div>
+
+              {/* Q4 2029 */}
+              <div className="relative pl-8 md:pl-12">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-900 border-4 border-white shadow-sm" />
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+                  <Badge className="w-fit bg-slate-900 text-white hover:bg-slate-800">Q4 2029</Badge>
+                  <h4 className="text-lg font-bold text-slate-900">Final Analysis</h4>
+                </div>
+                <p className="text-slate-600">
+                  Completion of all planned publications, including updated SECA-II survival data, ctDNA-based predictive modeling, and final LD-RAPID outcomes.
+                </p>
+              </div>
+            </div>
+
             <h2>Key Research Areas</h2>
             <p>
               The grant will specifically support two major initiatives:
