@@ -137,15 +137,7 @@ export default function About() {
                       </p>
                     </div>
 
-                    {/* 2018: LD-RAPID Launch */}
-                    <div className="relative pl-8">
-                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500 border-2 border-white shadow-sm" />
-                      <div className="text-sm font-bold text-purple-700 mb-1">2018</div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">Launch of LD-RAPID</h3>
-                      <p className="text-slate-600">
-                        The Living Donor RAPID (LD-RAPID) protocol is launched, utilizing a small left lateral segment from a living donor. This innovation aims to solve the organ scarcity problem for cancer patients.
-                      </p>
-                    </div>
+
 
                     {/* 2020: SECA-II Results */}
                     <div className="relative pl-8">
@@ -161,9 +153,9 @@ export default function About() {
                     <div className="relative pl-8">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-white shadow-md animate-pulse" />
                       <div className="text-sm font-bold text-primary mb-1">Present</div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">SURE-LT, TESLA & EXCALIBUR</h3>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">LD-RAPID, SURE-LT & TESLA</h3>
                       <p className="text-slate-600">
-                        Expanding the frontier with the SURE-LT protocol for synchronous disease, TESLA trial for intrahepatic cholangiocarcinoma, and the EXCALIBUR randomized controlled trial.
+                        Expanding the frontier with the LD-RAPID protocol for living donors, SURE-LT for synchronous disease, and the TESLA trial for intrahepatic cholangiocarcinoma.
                       </p>
                     </div>
 
@@ -186,7 +178,7 @@ export default function About() {
                   <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <h3 className="text-xl font-bold text-slate-900 mb-3">Colorectal Liver Metastases</h3>
                     <p className="text-slate-600">
-                      Continuing the SECA legacy with extended follow-up and the new EXCALIBUR randomized controlled trial.
+                      Continuing the SECA legacy with extended follow-up and ongoing research into patient selection and outcomes.
                     </p>
                   </div>
                   <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
