@@ -199,5 +199,34 @@ export const members: MemberProfile[] = [
       linkedin: "https://no.linkedin.com/in/morten-hagness-83b862220",
       researchgate: "https://www.researchgate.net/profile/Morten-Hagness-2"
     }
+  },
+  {
+    id: "asmund-fretland",
+    name: "Åsmund A. Fretland",
+    role: "HPB Surgeon",
+    titles: [
+      "Consultant HPB Surgeon, Oslo University Hospital",
+      "PhD"
+    ],
+    bio: "Dr. Åsmund A. Fretland is a Consultant HPB Surgeon with expertise in minimally invasive liver surgery. He has led randomized controlled trials comparing laparoscopic and open liver resection (OSLO-COMET). His research focuses on surgical techniques, outcomes, and the integration of minimally invasive approaches in transplant oncology.",
+    image: memberImages["content_05"], // Using placeholder for now
+    researchInterests: [
+      "Laparoscopic liver surgery",
+      "Colorectal liver metastases",
+      "Surgical clinical trials",
+      "Enhanced recovery after surgery"
+    ],
+    projects: [
+      {
+        title: "OSLO-COMET Trial",
+        description: "Principal Investigator for the OSLO-COMET trial, a randomized study comparing laparoscopic and open liver resection for colorectal metastases.",
+        role: "Principal Investigator"
+      }
+    ],
+    pubmedSearchTerm: "Fretland AA[Author]",
+    social: {
+      twitter: "https://x.com/AAfretland",
+      researchgate: "https://www.researchgate.net/profile/Asmund-Fretland"
+    }
   }
 ];
