@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oslo-transplant-oncology.pages.dev/sitemap.xml
+Sitemap: https://transplantoncology.org/sitemap.xml
