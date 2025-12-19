@@ -155,7 +155,7 @@ export default function About() {
                       <div className="text-sm font-bold text-primary mb-1">Present</div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">LD-RAPID, SURE-LT & TESLA</h3>
                       <p className="text-slate-600">
-                        Expanding the frontier with the LD-RAPID protocol for living donors, SURE-LT for synchronous disease, and the TESLA trial for intrahepatic cholangiocarcinoma.
+                        Expanding the frontier with the LD-RAPID protocol for living donors, and the SURE-LT and TESLA trials for cholangiocarcinoma.
                       </p>
                     </div>
 
