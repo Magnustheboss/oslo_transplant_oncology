@@ -154,6 +154,28 @@ export default function Home() {
                     </div>
                     <ArrowRight className="ml-auto w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
                   </a>
+
+                  <a href="https://x.com/YaqubSheraz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900">Follow Sheraz Yaqub</div>
+                      <div className="text-sm text-slate-500">@YaqubSheraz</div>
+                    </div>
+                    <ArrowRight className="ml-auto w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
+                  </a>
+
+                  <a href="https://x.com/HagnessMorten" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900">Follow Morten Hagness</div>
+                      <div className="text-sm text-slate-500">@HagnessMorten</div>
+                    </div>
+                    <ArrowRight className="ml-auto w-5 h-5 text-slate-300 group-hover:text-primary transition-colors" />
+                  </a>
                 </div>
               </div>
             </div>

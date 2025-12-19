@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SecureImage } from "@/components/SecureImage";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, Building2, Microscope, User, Linkedin, Twitter, FileText, Globe } from "lucide-react";
+import { ArrowLeft, BookOpen, Building2, Microscope, User, Linkedin, Twitter, FileText, Globe, Mail } from "lucide-react";
 import { Link } from "wouter";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -140,6 +140,14 @@ export default function MemberProfile() {
                     <span>{title}</span>
                   </div>
                 ))}
+                {member.email && (
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    <a href={`mailto:${member.email}`} className="hover:text-primary transition-colors">
+                      {member.email}
+                    </a>
+                  </div>
+                )}
               </div>
 
               {member.social && (

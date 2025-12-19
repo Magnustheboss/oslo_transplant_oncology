@@ -14,6 +14,7 @@ export interface MemberProfile {
   projects: Project[];
   pubmedSearchTerm: string;
   image?: string;
+  email?: string;
   social?: {
     orcid?: string;
     linkedin?: string;
@@ -162,6 +163,7 @@ export const members: MemberProfile[] = [
       }
     ],
     pubmedSearchTerm: "Smedman TM[Author] OR Smedman T[Author]",
+    email: "t.m.smedman@ous-research.no",
     social: {
       twitter: "https://x.com/Smedman_MD",
       orcid: "0000-0002-1531-1229",
