@@ -112,27 +112,33 @@ export default function NewsGrant() {
               The project is led by a multidisciplinary team of experts from Oslo University Hospital:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose mt-6">
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200">
-                <Users className="w-5 h-5 text-slate-400" />
-                <div>
-                  <div className="font-bold text-slate-900">Tor M. Smedman, MD, PhD</div>
-                  <div className="text-sm text-slate-500">Project Manager, PI</div>
+              <Link href="/team/tor-magnus-smedman">
+                <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer group">
+                  <Users className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+                  <div>
+                    <div className="font-bold text-slate-900 group-hover:text-primary transition-colors">Tor M. Smedman, MD, PhD</div>
+                    <div className="text-sm text-slate-500">Project Manager, PI</div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200">
-                <Users className="w-5 h-5 text-slate-400" />
-                <div>
-                  <div className="font-bold text-slate-900">Pål-Dag Line, MD, PhD</div>
-                  <div className="text-sm text-slate-500">Project Manager, Co-PI</div>
+              </Link>
+              <Link href="/team/pal-dag-line">
+                <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer group">
+                  <Users className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+                  <div>
+                    <div className="font-bold text-slate-900 group-hover:text-primary transition-colors">Pål-Dag Line, MD, PhD</div>
+                    <div className="text-sm text-slate-500">Project Manager, Co-PI</div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200">
-                <Users className="w-5 h-5 text-slate-400" />
-                <div>
-                  <div className="font-bold text-slate-900">Svein Dueland, MD, PhD</div>
-                  <div className="text-sm text-slate-500">Project Manager, Co-PI</div>
+              </Link>
+              <Link href="/team/svein-dueland">
+                <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-slate-200 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer group">
+                  <Users className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+                  <div>
+                    <div className="font-bold text-slate-900 group-hover:text-primary transition-colors">Svein Dueland, MD, PhD</div>
+                    <div className="text-sm text-slate-500">Project Manager, Co-PI</div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             <div className="mt-12 pt-8 border-t border-slate-200">
