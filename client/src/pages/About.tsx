@@ -87,13 +87,23 @@ export default function About() {
                   {/* Interactive Timeline */}
                   <div className="my-12 relative border-l-2 border-slate-200 ml-4 space-y-12">
                     
+                    {/* Pre-2006: The Contraindication Era */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-red-100 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-red-400 mb-1">Pre-2006</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">The Era of Contraindication</h3>
+                      <p className="text-slate-600">
+                        Liver transplantation for colorectal liver metastases (CRLM) was considered an absolute contraindication worldwide due to poor historical outcomes (18% 5-year survival) from the 1980s and 90s.
+                      </p>
+                    </div>
+
                     {/* 2006: SECA-I Start */}
                     <div className="relative pl-8">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-2 border-white shadow-sm" />
                       <div className="text-sm font-bold text-slate-400 mb-1">2006</div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">SECA-I Trial Initiated</h3>
                       <p className="text-slate-600">
-                        The world's first prospective pilot study investigating liver transplantation for unresectable colorectal liver metastases (CRLM).
+                        Challenging the dogma: The Oslo group initiates the world's first prospective pilot study to re-evaluate liver transplantation for unresectable CRLM using modern surgical techniques and immunosuppression.
                       </p>
                     </div>
 
@@ -123,7 +133,17 @@ export default function About() {
                       <div className="text-sm font-bold text-purple-600 mb-1">2015</div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">RAPID Procedure Introduced</h3>
                       <p className="text-slate-600">
-                        Introduction of the RAPID technique (Resection And Partial Liver Segment 2/3 Transplantation), paving the way for living donor protocols.
+                        Introduction of the RAPID technique (Resection And Partial Liver Segment 2/3 Transplantation), a novel two-stage hepatectomy concept using small auxiliary grafts.
+                      </p>
+                    </div>
+
+                    {/* 2018: LD-RAPID Launch */}
+                    <div className="relative pl-8">
+                      <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500 border-2 border-white shadow-sm" />
+                      <div className="text-sm font-bold text-purple-700 mb-1">2018</div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">Launch of LD-RAPID</h3>
+                      <p className="text-slate-600">
+                        The Living Donor RAPID (LD-RAPID) protocol is launched, utilizing a small left lateral segment from a living donor. This innovation aims to solve the organ scarcity problem for cancer patients.
                       </p>
                     </div>
 
@@ -141,9 +161,9 @@ export default function About() {
                     <div className="relative pl-8">
                       <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-white shadow-md animate-pulse" />
                       <div className="text-sm font-bold text-primary mb-1">Present</div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">TESLA & EXCALIBUR</h3>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2">SURE-LT, TESLA & EXCALIBUR</h3>
                       <p className="text-slate-600">
-                        Expanding the frontier with the TESLA trial for intrahepatic cholangiocarcinoma and the EXCALIBUR randomized controlled trial for high-load CRLM.
+                        Expanding the frontier with the SURE-LT protocol for synchronous disease, TESLA trial for intrahepatic cholangiocarcinoma, and the EXCALIBUR randomized controlled trial.
                       </p>
                     </div>
 
