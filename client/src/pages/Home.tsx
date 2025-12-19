@@ -268,7 +268,7 @@ export default function Home() {
             <Card className="group border-none shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-white h-full flex flex-col">
               <div className="h-48 overflow-hidden relative">
                 <div className="absolute inset-0 bg-slate-800/80 mix-blend-multiply z-10" />
-                <img src="/images/tesla-trial.jpg" alt="TESLA" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/images/tesla-trial-new.jpg" alt="TESLA" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute bottom-4 left-4 z-20">
                   <Badge className="bg-white/20 hover:bg-white/30 text-white border-none backdrop-blur-md">
                     Multicenter
