@@ -106,9 +106,17 @@ export default function Home() {
                 We are pleased to announce that the Oslo Transplant Oncology Group has been awarded a grant of <span className="font-bold text-slate-900">9 million NOK</span> from the <span className="font-semibold text-primary">South-Eastern Norway Regional Health Authority</span>.
               </p>
               
-              <p className="text-slate-600 leading-relaxed relative z-10">
+              <p className="text-slate-600 leading-relaxed relative z-10 mb-6">
                 This substantial funding will be instrumental in further advancing our pioneering research in the field of transplant oncology, supporting our ongoing clinical trials and translational studies aimed at improving survival outcomes for patients with non-resectable liver malignancies.
               </p>
+              
+              <div className="relative z-10">
+                <Link href="/news/grant-award-2025">
+                  <Button variant="outline" className="group">
+                    Read More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

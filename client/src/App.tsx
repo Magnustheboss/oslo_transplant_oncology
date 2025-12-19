@@ -11,6 +11,7 @@ import Team from "@/pages/Team";
 import MemberProfile from "@/pages/MemberProfile";
 import Publications from "@/pages/Publications";
 import Contact from "@/pages/Contact";
+import NewsGrant from "@/pages/NewsGrant";
 import NotFound from "@/pages/NotFound";
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/team/:id" component={MemberProfile} />
           <Route path="/publications" component={Publications} />
           <Route path="/contact" component={Contact} />
+          <Route path="/news/grant-award-2025" component={NewsGrant} />
           <Route component={NotFound} />
         </Switch>
       </Layout>
