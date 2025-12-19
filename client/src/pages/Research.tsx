@@ -266,7 +266,7 @@ export default function Research() {
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" /> Response/stable disease after 6 months of chemoradiotherapy</li>
                             <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-1.5 shrink-0" /> De-novo pCCA in PSC patients may be considered</li>
                           </ul>
-                          <div className="mt-6 pt-6 border-t border-slate-100">
+                          <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col gap-3">
                             <a 
                               href="https://clinicaltrials.gov/study/NCT06850753" 
                               target="_blank" 
@@ -274,6 +274,14 @@ export default function Research() {
                               className="inline-flex items-center text-emerald-700 font-semibold hover:text-emerald-800 hover:underline text-sm"
                             >
                               View on ClinicalTrials.gov <BookOpen className="ml-2 w-4 h-4" />
+                            </a>
+                            <a 
+                              href="https://doi.org/10.1097/SLA.0000000000006892" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center text-emerald-700 font-semibold hover:text-emerald-800 hover:underline text-sm"
+                            >
+                              Key Reference: DOI: 10.1097/SLA.0000000000006892 <BookOpen className="ml-2 w-4 h-4" />
                             </a>
                           </div>
                         </div>
