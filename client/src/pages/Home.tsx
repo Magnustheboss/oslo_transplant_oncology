@@ -84,6 +84,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Latest Updates Section */}
+      <section className="py-16 bg-slate-50 border-y border-slate-100">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-none px-3 py-1">
+                Latest Updates
+              </Badge>
+              <span className="text-sm font-medium text-slate-500">December 18, 2025</span>
+            </div>
+            
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full -mr-10 -mt-10" />
+              
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-slate-900 mb-4 relative z-10">
+                Major Grant Awarded for Transplant Oncology Research
+              </h2>
+              
+              <p className="text-lg text-slate-600 leading-relaxed mb-6 relative z-10">
+                We are pleased to announce that the Oslo Transplant Oncology Group has been awarded a grant of <span className="font-bold text-slate-900">9 million NOK</span> from the <span className="font-semibold text-primary">South-Eastern Norway Regional Health Authority</span>.
+              </p>
+              
+              <p className="text-slate-600 leading-relaxed relative z-10">
+                This substantial funding will be instrumental in further advancing our pioneering research in the field of transplant oncology, supporting our ongoing clinical trials and translational studies aimed at improving survival outcomes for patients with non-resectable liver malignancies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Social Feed */}
       <section className="py-24 bg-white border-b border-slate-100">
         <div className="container">
