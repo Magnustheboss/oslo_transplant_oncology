@@ -81,10 +81,29 @@ const coreMembers = [
 
 const associatedMembers = [
   { name: "Kristoffer Lassen", role: "Associate Member", affiliation: "Oslo University Hospital" },
-  { name: "Marit H. Andersen", role: "Associate Member", affiliation: "Oslo University Hospital" },
   { name: "Mona-Elisabeth Revheim", role: "Associate Member", affiliation: "Oslo University Hospital" },
+  { name: "Trygve Syversveen", role: "Associate Member", affiliation: "Oslo University Hospital" },
+  { 
+    name: "Jarle Hetland Bjørlin", 
+    role: "Art Director", 
+    affiliation: "DVEG Oslo",
+    link: "https://dvegoslo.no"
+  }
+];
 
-  { name: "Trygve Syversveen", role: "Associate Member", affiliation: "Oslo University Hospital" }
+const internationalPartners = [
+  {
+    name: "Karen-Lise Garm Spindler",
+    role: "Professor & Senior Consultant",
+    affiliation: "Aarhus University Hospital, Denmark",
+    bio: "Professor of Clinical Oncology specializing in gastrointestinal cancers. A leading expert in liquid biopsies and ctDNA, she heads the Danish Anal Cancer Group and drives international research on integrating ctDNA into personalized cancer treatment."
+  },
+  {
+    name: "Niels Pallisgaard",
+    role: "Professor & Molecular Biologist",
+    affiliation: "Zealand University Hospital, Denmark",
+    bio: "Head of the Molecular Unit at the Department of Pathology. A pioneer in developing ultrasensitive methods for detecting circulating tumor DNA (ctDNA), focusing on its clinical application for monitoring treatment response and early recurrence."
+  }
 ];
 
 export default function Team() {
@@ -182,15 +201,52 @@ export default function Team() {
       <section className="py-20">
         <div className="container">
           <h2 className="text-2xl font-heading font-bold text-slate-900 mb-12 text-center">Associated Members</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {associatedMembers.map((member, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:border-primary/30 transition-colors group">
+              <div key={index} className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:border-primary/30 transition-colors group relative">
+                {/* @ts-ignore */}
+                {member.link && (
+                  /* @ts-ignore */
+                  <a href={member.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`Visit ${member.name}'s website`} />
+                )}
                 <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-slate-400 mb-4 group-hover:bg-primary/5 group-hover:text-primary transition-colors">
                   <User className="w-8 h-8" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-1">{member.name}</h3>
                 <p className="text-xs text-slate-500">{member.affiliation}</p>
+                <div className="mt-2">
+                  <Badge variant="secondary" className="text-xs font-normal bg-slate-100 text-slate-600 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+                    {member.role}
+                  </Badge>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* International Partners */}
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <h2 className="text-2xl font-heading font-bold text-slate-900 mb-12 text-center">International Partners</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {internationalPartners.map((partner, index) => (
+              <Card key={index} className="border-slate-200 hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="mb-2">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">{partner.role}</span>
+                  </div>
+                  <CardTitle className="text-xl">{partner.name}</CardTitle>
+                  <CardDescription className="flex items-center gap-1 mt-1">
+                    <GraduationCap className="w-3 h-3" /> {partner.affiliation}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {partner.bio}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
