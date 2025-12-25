@@ -76,6 +76,13 @@ const coreMembers = [
     image: null,
     bio: "Consultant HPB Surgeon at Oslo University Hospital and a specialist in laparoscopic liver surgery. He led the landmark OSLO-COMET randomized controlled trial, which established the benefits of laparoscopic resection for colorectal liver metastases. His research continues to focus on minimally invasive techniques and clinical trials.",
     affiliation: "Oslo University Hospital"
+  },
+  {
+    name: "Ammar Khan",
+    role: "Transplant Surgeon",
+    image: null,
+    bio: "Transplant Surgeon at the Department of Transplantation Medicine, Oslo University Hospital. He specializes in liver transplantation and hepatobiliary surgery, with a research focus on vascular reconstruction and transplant oncology. He is actively involved in the group's clinical trials, including the SURE-LT and TESLA studies.",
+    affiliation: "Oslo University Hospital"
   }
 ];
 
