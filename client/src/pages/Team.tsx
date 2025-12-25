@@ -87,7 +87,8 @@ const associatedMembers = [
     name: "Jarle Hetland Bjørlin", 
     role: "Art Director", 
     affiliation: "DVEG Oslo",
-    link: "https://dvegoslo.no"
+    link: "https://dvegoslo.no",
+    bio: "With over 22 years of experience as an Art Director in the advertising industry, Jarle is a highly skilled graphic designer. He is responsible for crafting high-impact graphical abstracts and refining complex figures and illustrations for the group's publications and international presentations."
   }
 ];
 
@@ -203,18 +204,23 @@ export default function Team() {
           <h2 className="text-2xl font-heading font-bold text-slate-900 mb-12 text-center">Associated Members</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {associatedMembers.map((member, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:border-primary/30 transition-colors group relative">
+              <div key={index} className="bg-white p-6 rounded-xl border border-slate-100 text-center hover:border-primary/30 transition-colors group relative flex flex-col h-full">
                 {/* @ts-ignore */}
                 {member.link && (
                   /* @ts-ignore */
                   <a href={member.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`Visit ${member.name}'s website`} />
                 )}
-                <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-slate-400 mb-4 group-hover:bg-primary/5 group-hover:text-primary transition-colors">
+                <div className="w-16 h-16 mx-auto bg-slate-50 rounded-full flex items-center justify-center text-slate-400 mb-4 group-hover:bg-primary/5 group-hover:text-primary transition-colors shrink-0">
                   <User className="w-8 h-8" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-1">{member.name}</h3>
-                <p className="text-xs text-slate-500">{member.affiliation}</p>
-                <div className="mt-2">
+                <p className="text-xs text-slate-500 mb-3">{member.affiliation}</p>
+                {/* @ts-ignore */}
+                {member.bio && (
+                  /* @ts-ignore */
+                  <p className="text-sm text-slate-600 mb-4 flex-grow">{member.bio}</p>
+                )}
+                <div className="mt-auto">
                   <Badge variant="secondary" className="text-xs font-normal bg-slate-100 text-slate-600 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                     {member.role}
                   </Badge>
