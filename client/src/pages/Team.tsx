@@ -74,15 +74,30 @@ const coreMembers = [
     name: "Åsmund A. Fretland",
     role: "HPB Surgeon",
     image: null,
-    bio: "Expert in minimally invasive surgery and clinical trials.",
+    bio: "Consultant HPB Surgeon at Oslo University Hospital and a specialist in laparoscopic liver surgery. He led the landmark OSLO-COMET randomized controlled trial, which established the benefits of laparoscopic resection for colorectal liver metastases. His research continues to focus on minimally invasive techniques and clinical trials.",
     affiliation: "Oslo University Hospital"
   }
 ];
 
 const associatedMembers = [
-  { name: "Kristoffer Lassen", role: "Associate Member", affiliation: "Oslo University Hospital" },
-  { name: "Mona-Elisabeth Revheim", role: "Associate Member", affiliation: "Oslo University Hospital" },
-  { name: "Trygve Syversveen", role: "Associate Member", affiliation: "Oslo University Hospital" },
+  { 
+    name: "Kristoffer Lassen", 
+    role: "Associate Member", 
+    affiliation: "Oslo University Hospital",
+    bio: "Professor and Chief of HPB Surgery at Oslo University Hospital. His research focuses on pancreatic cancer, colorectal liver metastases, and minimally invasive liver surgery. He is a key investigator in national and international trials, including the EXCALIBUR study and the NORPACT-1 trial."
+  },
+  { 
+    name: "Mona-Elisabeth Revheim", 
+    role: "Associate Member", 
+    affiliation: "Oslo University Hospital",
+    bio: "Professor and Head of the Intervention Centre at Oslo University Hospital. A specialist in nuclear medicine and radiology, her research centers on molecular imaging (PET/MRI) for cancer diagnosis and treatment monitoring. She investigates advanced imaging biomarkers to improve patient selection and outcome prediction in transplant oncology."
+  },
+  { 
+    name: "Trygve Syversveen", 
+    role: "Associate Member", 
+    affiliation: "Oslo University Hospital",
+    bio: "Consultant Radiologist at the Department of Radiology and Nuclear Medicine, Oslo University Hospital. He specializes in abdominal imaging and plays a crucial role in the pre-operative assessment of transplant candidates. His research focuses on radiological prognostic factors in liver transplantation."
+  },
   { 
     name: "Jarle Hetland Bjørlin", 
     role: "Art Director", 
